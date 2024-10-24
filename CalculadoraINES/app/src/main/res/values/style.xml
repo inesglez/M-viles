@@ -1,0 +1,30 @@
+<resources>
+
+    <!-- Estilo para los botones de las dos primeras filas -->
+    <style name="MyMaterialButtonStyle">
+        <item name="android:background">#0000ff</item> <!-- Color de fondo -->
+        <item name="android:textColor">#FFFFFF</item> <!-- Color del texto -->
+        <item name="android:padding">16dp</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:drawableStart">@drawable/ic_launcher_foreground</item> <!-- Imagen al lado del texto -->
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <!-- Estilo para los botones de las siguientes filas -->
+    <style name="MyMaterialButtonStyleBis">
+        <item name="android:background">#0000ff</item> <!-- Color de fondo -->
+        <item name="android:textColor">#FFFFFF</item> <!-- Color del texto -->
+        <item name="android:padding">16dp</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <!-- Estilo para el visor -->
+    <style name="MiVisorStyle">
+        <item name="android:textColor">#0000ff</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:background">#E0E0E0</item> <!-- Color de fondo del visor -->
+    </style>
+
+</resources>

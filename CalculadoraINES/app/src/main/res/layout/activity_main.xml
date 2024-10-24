@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:columnCount="4"
+    android:orientation="horizontal"
+    android:useDefaultMargins="true">
+
+    <!-- Visor de la calculadora con estilo personalizado -->
+    <TextView
+        android:id="@+id/pantalla"
+        style="@style/MiVisorStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="VISOR"
+        android:gravity="end"
+        android:layout_rowSpan="1"
+        android:layout_columnSpan="4"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Fila 1 -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/MyMaterialButtonStyle"
+        android:text="/"
+        android:id="@+id/dividir"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/MyMaterialButtonStyle"
+        android:text="7"
+        android:id="@+id/n7"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/MyMaterialButtonStyle"
+        android:text="8"
+        android:id="@+id/n8"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/MyMaterialButtonStyle"
+        android:text="9"
+        android:id="@+id/n9"/>
+
+    <!-- Fila 2 -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/MyMaterialButtonStyle"
+        android:text="*"
+        android:id="@+id/multi"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/MyMaterialButtonStyle"
+        android:text="4"
+        android:id="@+id/n4"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/MyMaterialButtonStyle"
+        android:text="5"
+        android:id="@+id/n5"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/MyMaterialButtonStyle"
+        android:text="6"
+        android:id="@+id/n6"/>
+
+    <!-- Fila 3 -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/MyMaterialButtonStyle"
+        android:text="-"
+        android:id="@+id/resta"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/MyMaterialButtonStyle"
+        android:text="1"
+        android:id="@+id/n1"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/MyMaterialButtonStyle"
+        android:text="2"
+        android:id="@+id/n2"/>
+
+    <Button
+        android:id="@+id/n3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/MyMaterialButtonStyle"
+        android:text="3"/>
+
+    <!-- Fila 4 -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/MyMaterialButtonStyleBis"
+        android:layout_rowSpan="2"
+        android:text="+"
+        android:id="@+id/suma"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/MyMaterialButtonStyle"
+        android:text="0"
+        android:id="@+id/n0"/>/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/MyMaterialButtonStyle"
+        android:text="00"
+        android:id="@+id/borrarTodo"/>/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/MyMaterialButtonStyle"
+        android:text="="
+        android:id="@+id/calcular"/>/>
+
+    <!-- Botón de punto decimal -->
+    <Button
+        android:id="@+id/punto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/MyMaterialButtonStyle"
+        android:text="." />
+</GridLayout>
