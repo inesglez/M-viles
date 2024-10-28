@@ -1,0 +1,5 @@
+<resources>
+    <color name="black">#000000</color>
+    <color name="switch_on">#28A745</color> <!-- Color de switch encendido -->
+    <color name="switch_off">#E0E0E0</color> <!-- Color de switch apagado -->
+</resources>

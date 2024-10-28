@@ -1,0 +1,30 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <CheckBox
+        android:id="@+id/myCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Opción 1"
+        android:textColor="@color/black"
+        android:button="@drawable/custom_checkbox" />
+
+    <RadioButton
+        android:id="@+id/myRadioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Opción A"
+        android:textColor="@color/black"
+        android:button="@drawable/custom_radiobutton" />
+
+    <Switch
+        android:id="@+id/mySwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Encendido/Apagado"
+        android:thumb="@drawable/custom_switch_thumb"
+        android:track="@drawable/custom_switch_track" />
+</LinearLayout>

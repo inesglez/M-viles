@@ -1,0 +1,49 @@
+<!-- res/layout/activity_main.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- EditText para ingresar el primer número -->
+    <EditText
+        android:id="@+id/numero1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="Ingrese el primer número" />
+
+    <!-- EditText para ingresar el segundo número -->
+    <EditText
+        android:id="@+id/numero2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="Ingrese el segundo número"
+        android:layout_marginTop="8dp" />
+
+    <!-- CheckBox para seleccionar si queremos sumar -->
+    <CheckBox
+        android:id="@+id/checkBoxSumar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sumar"
+        android:layout_marginTop="16dp" />
+
+    <!-- CheckBox para seleccionar si queremos restar -->
+    <CheckBox
+        android:id="@+id/checkBoxRestar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Restar" />
+
+    <!-- TextView para mostrar el resultado -->
+    <TextView
+        android:id="@+id/textoResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Resultado aparecerá aquí"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"/>
+</LinearLayout>
