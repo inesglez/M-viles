@@ -1,0 +1,29 @@
+<resources>
+
+    <!-- Estilo para los botones del teclado -->
+    <style name="botonesLetras">
+        <item name="android:layout_weight">1</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:layout_width">24dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="backgroundTint">@color/gray</item>
+        <item name="android:buttonCornerRadius">4dp</item>
+        <item name="android:fontFamily">sans-serif</item> <!-- Puedes ajustar la fuente si lo deseas -->
+        <item name="android:textSize">16sp</item> <!-- Tamaño de texto -->
+    </style>
+
+    <style name="BotonTeclado">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:backgroundTint">@color/gray</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:buttonCornerRadius">4dp</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+</resources>
