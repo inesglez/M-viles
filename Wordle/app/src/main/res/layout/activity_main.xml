@@ -7,7 +7,26 @@
     android:padding="16dp"
     android:background="#f8f4fc"> <!-- Cambié el color de fondo para ver mejor -->
 
+    <!-- Título de la aplicación con estilo -->
+
     <!-- Cuadrícula de 5x6 para las letras -->
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="match_parent"
+        android:layout_height="168dp"
+        android:fontFamily="@font/comicate"
+        android:gravity="center"
+        android:paddingBottom="16dp"
+        android:shadowColor="#000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="4"
+        android:text="WORDLE"
+        android:textColor="#4CAF50"
+        android:textSize="75sp"
+        android:textStyle="bold" />
+
     <GridLayout
         android:id="@+id/cuadrillaLetras"
         android:layout_width="wrap_content"
@@ -16,74 +35,178 @@
         android:columnCount="5"
         android:rowCount="6"
         android:layout_gravity="center"
+        android:layout_marginBottom="0dp"
         android:paddingBottom="16dp">
-        <!-- Añadimos los TextView vacíos dinámicamente desde el código Java -->
     </GridLayout>
 
-    <!-- Teclado personalizado -->
     <LinearLayout
         android:id="@+id/teclado"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:layout_width="396dp"
+        android:layout_height="230dp"
         android:layout_gravity="center"
-        android:paddingTop="16dp"
-        android:background="#FFFFFF"> <!-- Fondo blanco para diferenciar -->
+        android:background="#FFFFFF"
+        android:orientation="vertical"
+        android:paddingLeft="8dp"
+        android:paddingTop="8dp">
 
         <!-- Fila 1 del teclado -->
         <LinearLayout
             android:id="@+id/fila1Teclado"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="370dp"
+            android:layout_height="80dp"
             android:orientation="horizontal">
-            <Button android:id="@+id/btnQ" android:text="Q" style="@style/botonesLetras"/>
-            <Button android:id="@+id/btnW" android:text="W" style="@style/botonesLetras"/>
-            <Button android:id="@+id/btnE" android:text="E" style="@style/botonesLetras"/>
-            <Button android:id="@+id/btnR" android:text="R" style="@style/botonesLetras"/>
-            <Button android:id="@+id/btnT" android:text="T" style="@style/botonesLetras"/>
-            <Button android:id="@+id/btnY" android:text="Y" style="@style/botonesLetras"/>
-            <Button android:id="@+id/btnU" android:text="U" style="@style/botonesLetras"/>
-            <Button android:id="@+id/btnI" android:text="I" style="@style/botonesLetras"/>
-            <Button android:id="@+id/btnO" android:text="O" style="@style/botonesLetras"/>
-            <Button android:id="@+id/btnP" android:text="P" style="@style/botonesLetras"/>
+
+            <Button
+                android:id="@+id/btnQ"
+                style="@style/botonesLetras"
+                android:text="Q" />
+
+            <Button
+                android:id="@+id/btnW"
+                style="@style/botonesLetras"
+                android:text="W" />
+
+            <Button
+                android:id="@+id/btnE"
+                style="@style/botonesLetras"
+                android:text="E" />
+
+            <Button
+                android:id="@+id/btnR"
+                style="@style/botonesLetras"
+                android:text="R" />
+
+            <Button
+                android:id="@+id/btnT"
+                style="@style/botonesLetras"
+                android:text="T" />
+
+            <Button
+                android:id="@+id/btnY"
+                style="@style/botonesLetras"
+                android:text="Y" />
+
+            <Button
+                android:id="@+id/btnU"
+                style="@style/botonesLetras"
+                android:text="U" />
+
+            <Button
+                android:id="@+id/btnI"
+                style="@style/botonesLetras"
+                android:text="I" />
+
+            <Button
+                android:id="@+id/btnO"
+                style="@style/botonesLetras"
+                android:text="O" />
+
+            <Button
+                android:id="@+id/btnP"
+                style="@style/botonesLetras"
+                android:text="P" />
         </LinearLayout>
 
         <!-- Fila 2 del teclado -->
         <LinearLayout
             android:id="@+id/fila2Teclado"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="370dp"
+            android:layout_height="80dp"
             android:orientation="horizontal">
-            <Button android:id="@+id/btnA" android:text="A" style="@style/botonesLetras"/>
-            <Button android:id="@+id/btnS" android:text="S" style="@style/botonesLetras"/>
-            <Button android:id="@+id/btnD" android:text="D" style="@style/botonesLetras"/>
-            <Button android:id="@+id/btnF" android:text="F" style="@style/botonesLetras"/>
-            <Button android:id="@+id/btnG" android:text="G" style="@style/botonesLetras"/>
-            <Button android:id="@+id/btnH" android:text="H" style="@style/botonesLetras"/>
-            <Button android:id="@+id/btnJ" android:text="J" style="@style/botonesLetras"/>
-            <Button android:id="@+id/btnK" android:text="K" style="@style/botonesLetras"/>
-            <Button android:id="@+id/btnL" android:text="L" style="@style/botonesLetras"/>
+
+            <Button
+                android:id="@+id/btnA"
+                style="@style/botonesLetras"
+                android:text="A" />
+
+            <Button
+                android:id="@+id/btnS"
+                style="@style/botonesLetras"
+                android:text="S" />
+
+            <Button
+                android:id="@+id/btnD"
+                style="@style/botonesLetras"
+                android:text="D" />
+
+            <Button
+                android:id="@+id/btnF"
+                style="@style/botonesLetras"
+                android:text="F" />
+
+            <Button
+                android:id="@+id/btnG"
+                style="@style/botonesLetras"
+                android:text="G" />
+
+            <Button
+                android:id="@+id/btnH"
+                style="@style/botonesLetras"
+                android:text="H" />
+
+            <Button
+                android:id="@+id/btnJ"
+                style="@style/botonesLetras"
+                android:text="J" />
+
+            <Button
+                android:id="@+id/btnK"
+                style="@style/botonesLetras"
+                android:text="K" />
+
+            <Button
+                android:id="@+id/btnL"
+                style="@style/botonesLetras"
+                android:text="L" />
         </LinearLayout>
 
         <!-- Fila 3 del teclado -->
         <LinearLayout
             android:id="@+id/fila3Teclado"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="370dp"
+            android:layout_height="80dp"
             android:orientation="horizontal">
 
             <Button
                 android:id="@+id/btnEnter"
                 style="@style/botonesLetras"
-                android:layout_width="65dp"
+                android:layout_width="114dp"
                 android:text="Enter" />
-            <Button android:id="@+id/btnZ" android:text="Z" style="@style/botonesLetras"/>
-            <Button android:id="@+id/btnX" android:text="X" style="@style/botonesLetras"/>
-            <Button android:id="@+id/btnC" android:text="C" style="@style/botonesLetras"/>
-            <Button android:id="@+id/btnV" android:text="V" style="@style/botonesLetras"/>
-            <Button android:id="@+id/btnB" android:text="B" style="@style/botonesLetras"/>
-            <Button android:id="@+id/btnN" android:text="N" style="@style/botonesLetras"/>
-            <Button android:id="@+id/btnM" android:text="M" style="@style/botonesLetras"/>
+
+            <Button
+                android:id="@+id/btnZ"
+                style="@style/botonesLetras"
+                android:text="Z" />
+
+            <Button
+                android:id="@+id/btnX"
+                style="@style/botonesLetras"
+                android:text="X" />
+
+            <Button
+                android:id="@+id/btnC"
+                style="@style/botonesLetras"
+                android:text="C" />
+
+            <Button
+                android:id="@+id/btnV"
+                style="@style/botonesLetras"
+                android:text="V" />
+
+            <Button
+                android:id="@+id/btnB"
+                style="@style/botonesLetras"
+                android:text="B" />
+
+            <Button
+                android:id="@+id/btnN"
+                style="@style/botonesLetras"
+                android:text="N" />
+
+            <Button
+                android:id="@+id/btnM"
+                style="@style/botonesLetras"
+                android:text="M" />
 
             <Button
                 android:id="@+id/btnBorrar"
