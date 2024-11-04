@@ -1,0 +1,9 @@
+<!-- res/anim/move_right.xml -->
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <translate
+        android:fromXDelta="-100%"
+        android:toXDelta="100%"
+        android:duration="2000"
+        android:repeatCount="infinite"
+        android:repeatMode="reverse" />
+</set>
