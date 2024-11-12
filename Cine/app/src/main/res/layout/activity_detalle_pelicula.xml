@@ -1,0 +1,55 @@
+<!-- res/layout/activity_detalle_pelicula.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Imagen de la película -->
+    <ImageView
+        android:id="@+id/detallePeliculaImagen"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:scaleType="centerCrop" />
+
+    <!-- Título de la película -->
+    <TextView
+        android:id="@+id/detallePeliculaTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Sinopsis de la película -->
+    <TextView
+        android:id="@+id/detallePeliculaSinopsis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp" />
+
+    <!-- Género de la película -->
+    <TextView
+        android:id="@+id/detallePeliculaGenero"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp" />
+
+    <!-- Duración de la película -->
+    <TextView
+        android:id="@+id/detallePeliculaDuracion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp" />
+
+    <!-- Rating de la película -->
+    <RatingBar
+        android:id="@+id/detallePeliculaPuntuacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:stepSize="0.5"
+        android:layout_marginTop="8dp"/>
+</LinearLayout>
