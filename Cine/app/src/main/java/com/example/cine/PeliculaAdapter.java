@@ -80,7 +80,6 @@ public class PeliculaAdapter extends RecyclerView.Adapter<PeliculaAdapter.Pelicu
         public PeliculaViewHolder(View itemView) {
             super(itemView);
 
-            // Inicializar los elementos de la vista con los nuevos IDs
             imagen = itemView.findViewById(R.id.peliculaImagen);
             titulo = itemView.findViewById(R.id.peliculaTitulo);
             genero = itemView.findViewById(R.id.peliculaGenero);
