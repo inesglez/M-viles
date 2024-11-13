@@ -9,7 +9,7 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#77FFE8"
+        android:background="#493e40"
         android:elevation="4dp"
         android:padding="16dp">
 
@@ -17,12 +17,12 @@
             android:id="@+id/encabezado"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Cine Zona Este"
+            android:text="CINEMANÍA"
             android:textSize="45sp"
-            android:textColor="#000000"
+            android:textColor="#fdb94a"
             android:layout_gravity="center"
             android:textStyle="bold"
-            android:fontFamily="@font/madjoe"/>
+            android:fontFamily="@font/chewy"/>
 
     </androidx.appcompat.widget.Toolbar>
 

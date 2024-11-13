@@ -13,8 +13,9 @@
         android:theme="@style/Theme.Cine"
         tools:targetApi="31">
 
+        <!-- Declarar LoginActivity como actividad principal -->
         <activity
-            android:name=".MainActivity"
+            android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,7 +23,13 @@
             </intent-filter>
         </activity>
 
-        <!-- Declarar la actividad de detalles de la película aquí -->
+        <!-- MainActivity, sin el intent-filter, para que se inicie solo después de autenticación -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+        </activity>
+
+        <!-- Declarar la actividad de detalles de la película -->
         <activity
             android:name=".DetallePeliculaActivity"
             android:exported="false">
