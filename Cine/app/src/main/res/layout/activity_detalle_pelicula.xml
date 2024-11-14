@@ -1,6 +1,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     android:orientation="vertical"
     android:padding="16dp">
 
@@ -9,49 +10,49 @@
         android:id="@+id/detallePeliculaImagen"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_gravity="center"
         android:layout_weight="0.7"
-        android:scaleType="centerCrop"
-        android:layout_gravity="center" />
+        android:scaleType="centerCrop" />
 
     <!-- Título de la película -->
     <TextView
         android:id="@+id/detallePeliculaTitulo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="22sp"
         android:layout_marginTop="16dp"
-        android:gravity="center"/>
+        android:gravity="center"
+        android:textSize="22sp" />
 
     <!-- Sinopsis de la película -->
     <TextView
         android:id="@+id/detallePeliculaSinopsis"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="16sp"
-        android:layout_marginTop="8dp" />
+        android:layout_marginTop="8dp"
+        android:textSize="16sp" />
 
     <!-- Género de la película -->
     <TextView
         android:id="@+id/detallePeliculaGenero"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="16sp"
-        android:layout_marginTop="8dp" />
+        android:layout_marginTop="8dp"
+        android:textSize="16sp" />
 
     <!-- Duración de la película -->
     <TextView
         android:id="@+id/detallePeliculaDuracion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="16sp"
-        android:layout_marginTop="8dp" />
+        android:layout_marginTop="8dp"
+        android:textSize="16sp" />
 
     <!-- Rating de la película -->
     <RatingBar
         android:id="@+id/detallePeliculaPuntuacion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:numStars="5"
-        android:stepSize="0.5"
-        android:layout_marginTop="8dp"/>
+        android:stepSize="0.5" />
 </LinearLayout>

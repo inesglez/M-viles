@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
 
                 // Ajusta el tamaño de las celdas
                 int anchoCelda = 190; // Cambia este valor para ajustar el ancho
-                int alturaCelda = 170; // Cambia este valor para ajustar la altura
+                int alturaCelda = 140; // Cambia este valor para ajustar la altura
                 parametros.width = anchoCelda; // Establece el ancho de la celda
                 parametros.height = alturaCelda; // Establece la altura de la celda
 
@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void crearEstiloCelda(TextView celda) {
-        celda.setTextSize(30); // Aumenta el tamaño de la letra
+        celda.setTextSize(20); // Aumenta el tamaño de la letra
         celda.setTextColor(Color.BLACK); // Cambia el color de la letra
         celda.setBackgroundResource(android.R.drawable.editbox_background_normal);
         celda.setPadding(60, 20, 60, 20); // Ajusta el padding
