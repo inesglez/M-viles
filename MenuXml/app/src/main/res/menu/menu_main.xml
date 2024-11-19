@@ -1,0 +1,27 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/days_of_week"
+        android:title="Días de la Semana">
+        <menu> <item
+            android:id="@+id/monday"
+            android:title="Lunes" />
+            <item
+                android:id="@+id/tuesday"
+                android:title="Martes" />
+            <item
+                android:id="@+id/wednesday"
+                android:title="Miércoles" />
+
+        </menu>
+    </item>
+    <item
+        android:id="@+id/months_of_year"
+        android:title="Meses del Año">
+        <menu>
+            <item android:id="@+id/january" android:title="Enero" />
+            <item android:id="@+id/february" android:title="Febrero" />
+            <item android:id="@+id/march" android:title="Marzo" />
+            <item android:id="@+id/april" android:title="Abril" />
+        </menu>
+    </item>
+</menu>
