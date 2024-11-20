@@ -5,13 +5,16 @@
     android:background="#FFFFFF"
     android:orientation="vertical">
 
+    <!-- RecyclerView para mostrar la cartelera -->
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#493e40"
         android:elevation="4dp"
-        android:padding="16dp">
+        android:padding="16dp"
+        android:titleTextColor="#fdb94a">
 
         <TextView
             android:id="@+id/encabezado"
@@ -24,6 +27,15 @@
             android:textSize="45sp"
             android:textStyle="bold" />
 
+        <!-- Ícono del menú desplegable en la esquina superior derecha -->
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/menuButton"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="-16dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/ajustes" />
     </androidx.appcompat.widget.Toolbar>
 
     <androidx.recyclerview.widget.RecyclerView

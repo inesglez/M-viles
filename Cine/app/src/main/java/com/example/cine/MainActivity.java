@@ -1,7 +1,9 @@
 package com.example.cine;
 
+import android.content.Intent;
 import android.os.Bundle;
-
+import android.view.Menu;
+import android.view.MenuItem;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -19,10 +21,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // Inicializar RecyclerView
-        recyclerView = findViewById(R.id.recyclerViewCartelera);  // Asegúrate que el ID coincida con el XML
+        recyclerView = findViewById(R.id.recyclerViewCartelera);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        // Crear la lista de películas usando recursos locales para las imágenes
+        // Crear la lista de películas
         peliculaList = new ArrayList<>();
         peliculaList.add(new Pelicula("La Infiltrada", "Una espía encubierta se infiltra en una peligrosa red criminal.", "Acción", 120, 4.5f, R.drawable.la_infiltrada));
         peliculaList.add(new Pelicula("Gru, Mi Villano Favorito", "Gru planea el mayor atraco de la historia, mientras cría a tres niñas huérfanas.", "Animación", 95, 4.7f, R.drawable.gru));
@@ -34,4 +36,32 @@ public class MainActivity extends AppCompatActivity {
         peliculaAdapter = new PeliculaAdapter(this, peliculaList);
         recyclerView.setAdapter(peliculaAdapter);
     }
+
+    // Inflar el menú cuando el usuario hace clic en el ícono de ajustes (el menú desplegable)
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_desplegable, menu);  // Asegúrate de que el archivo de menú sea "menu_desplegable"
+        return true;
+    }
+
+    // Manejar la acción del menú, como "Cerrar sesión" o "Perfil"
+    @Override
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Usar if-else en lugar de switch para evitar problemas con R.id
+        if (item.getItemId() == R.id.cerrar_sesion) {
+            // Al seleccionar "Cerrar sesión", redirigimos a LoginActivity
+            Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+            startActivity(intent);
+            finish(); // Finalizamos la actividad actual (MainActivity)
+            return true;
+        } else if (item.getItemId() == R.id.perfil) {
+            // Al seleccionar "Perfil", no hace nada por ahora o puedes abrir una nueva actividad de perfil
+            // Intent intentPerfil = new Intent(MainActivity.this, PerfilActivity.class);
+            // startActivity(intentPerfil);
+            return true;
+        } else {
+            return super.onOptionsItemSelected(item);
+        }
+}
 }

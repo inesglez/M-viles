@@ -29,6 +29,12 @@
             android:exported="true">
         </activity>
 
+        <!-- AdminActivity, para el administrador -->
+        <activity
+            android:name=".AdminActivity"
+            android:exported="true">
+        </activity>
+
         <!-- Declarar la actividad de detalles de la película -->
         <activity
             android:name=".DetallePeliculaActivity"
