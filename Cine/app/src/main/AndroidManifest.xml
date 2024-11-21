@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.cine">
 
     <application
         android:allowBackup="true"
@@ -32,6 +33,12 @@
         <!-- AdminActivity, para el administrador -->
         <activity
             android:name=".AdminActivity"
+            android:exported="true">
+        </activity>
+
+        <!-- EliminarPeliculaActivity, para eliminar películas -->
+        <activity
+            android:name=".EliminarPeliculaActivity"
             android:exported="true">
         </activity>
 

@@ -6,16 +6,16 @@
     android:orientation="vertical">
 
     <!-- RecyclerView para mostrar la cartelera -->
-
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#493e40"
+        android:background="#fdb94a"
         android:elevation="4dp"
         android:padding="16dp"
-        android:titleTextColor="#fdb94a">
+        android:titleTextColor="#493e40">
 
+        <!-- Título de la Toolbar -->
         <TextView
             android:id="@+id/encabezado"
             android:layout_width="wrap_content"
@@ -23,19 +23,9 @@
             android:layout_gravity="center"
             android:fontFamily="@font/chewy"
             android:text="CINEMANÍA"
-            android:textColor="#fdb94a"
+            android:textColor="#493e40"
             android:textSize="45sp"
             android:textStyle="bold" />
-
-        <!-- Ícono del menú desplegable en la esquina superior derecha -->
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/menuButton"
-            android:layout_width="36dp"
-            android:layout_height="36dp"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="-16dp"
-            android:layout_marginEnd="8dp"
-            android:src="@drawable/ajustes" />
     </androidx.appcompat.widget.Toolbar>
 
     <androidx.recyclerview.widget.RecyclerView

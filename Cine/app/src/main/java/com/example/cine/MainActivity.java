@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
@@ -19,6 +20,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // Configurar la Toolbar
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);  // Establecer la Toolbar como ActionBar
 
         // Inicializar RecyclerView
         recyclerView = findViewById(R.id.recyclerViewCartelera);
@@ -37,18 +42,16 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setAdapter(peliculaAdapter);
     }
 
-    // Inflar el menú cuando el usuario hace clic en el ícono de ajustes (el menú desplegable)
+    // Inflar el menú cuando el usuario hace clic en el ícono de ajustes
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_desplegable, menu);  // Asegúrate de que el archivo de menú sea "menu_desplegable"
+        getMenuInflater().inflate(R.menu.menu_desplegable, menu);  // Inflar el archivo de menú
         return true;
     }
 
     // Manejar la acción del menú, como "Cerrar sesión" o "Perfil"
     @Override
-
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Usar if-else en lugar de switch para evitar problemas con R.id
         if (item.getItemId() == R.id.cerrar_sesion) {
             // Al seleccionar "Cerrar sesión", redirigimos a LoginActivity
             Intent intent = new Intent(MainActivity.this, LoginActivity.class);
@@ -56,12 +59,10 @@ public class MainActivity extends AppCompatActivity {
             finish(); // Finalizamos la actividad actual (MainActivity)
             return true;
         } else if (item.getItemId() == R.id.perfil) {
-            // Al seleccionar "Perfil", no hace nada por ahora o puedes abrir una nueva actividad de perfil
-            // Intent intentPerfil = new Intent(MainActivity.this, PerfilActivity.class);
-            // startActivity(intentPerfil);
+            // Acción para el perfil
             return true;
         } else {
             return super.onOptionsItemSelected(item);
         }
-}
+    }
 }

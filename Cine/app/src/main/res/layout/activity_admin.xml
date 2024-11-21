@@ -2,20 +2,20 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp"
-    android:weightSum="1">
+    android:background="#FFFFFF"
+    android:orientation="vertical">
 
-    <!-- Toolbar con el encabezado y el botón de ajustes -->
+    <!-- RecyclerView para mostrar la cartelera -->
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#493e40"
+        android:background="#fdb94a"
         android:elevation="4dp"
-        android:titleTextColor="#fdb94a"
-        android:layout_weight="0">
+        android:padding="16dp"
+        android:titleTextColor="#493e40">
 
+        <!-- Título de la Toolbar -->
         <TextView
             android:id="@+id/encabezado"
             android:layout_width="wrap_content"
@@ -23,49 +23,37 @@
             android:layout_gravity="center"
             android:fontFamily="@font/chewy"
             android:text="CINEMANÍA"
-            android:textColor="#fdb94a"
+            android:textColor="#493e40"
             android:textSize="45sp"
             android:textStyle="bold" />
-
-        <!-- Ícono del menú desplegable en la esquina superior derecha -->
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/menuButton"
-            android:layout_width="36dp"
-            android:layout_height="36dp"
-            android:src="@drawable/ajustes"
-            android:layout_gravity="end"
-            android:layout_marginTop="-16dp"
-            android:layout_marginEnd="16dp" />  <!-- Ajusta el margen para el espacio a la derecha -->
     </androidx.appcompat.widget.Toolbar>
 
-    <!-- Botones debajo del encabezado -->
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
-        <LinearLayout
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Botón "Ver lista de películas" -->
+        <Button
+            android:id="@+id/btnVerLista"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp">
+            android:text="Ver lista de películas" />
 
-            <Button
-                android:id="@+id/btnVerLista"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Ver lista de películas" />
+        <!-- Botón "Eliminar películas" -->
+        <Button
+            android:id="@+id/btnEliminar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Eliminar películas" />
 
-            <Button
-                android:id="@+id/btnEliminar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Eliminar películas" />
+        <!-- Botón "Agregar películas" -->
+        <Button
+            android:id="@+id/btnAgregar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Agregar películas" />
+    </LinearLayout>
 
-            <Button
-                android:id="@+id/btnAgregar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Agregar películas" />
-        </LinearLayout>
-    </ScrollView>
 </LinearLayout>

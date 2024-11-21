@@ -3,4 +3,5 @@
     <color name="primary">#FFA726</color>            <!-- Naranja principal -->
     <color name="primaryDark">#FF6F00</color>        <!-- Naranja oscuro -->
     <color name="hintColor">#AAAAAA</color>          <!-- Color de hint -->
+    <color name="toolbar_color">#3F51B5</color>
 </resources>
