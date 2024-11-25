@@ -15,11 +15,6 @@
           <theme>@style/Theme.Cine</theme>
         </config>
       </layout>
-      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_eliminar_pelicula.xml">
-        <config>
-          <theme>@style/Theme.Cine</theme>
-        </config>
-      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml">
         <config>
           <theme>@style/Theme.Cine</theme>
@@ -31,11 +26,6 @@
         </config>
       </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/item_pelicula.xml">
-        <config>
-          <theme>@style/Theme.Cine</theme>
-        </config>
-      </layout>
-      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/item_pelicula_eliminar.xml">
         <config>
           <theme>@style/Theme.Cine</theme>
         </config>
@@ -52,8 +42,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f921498c-b81e-4daf-bb9d-15df358c73be" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_eliminar_pelicula.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_pelicula_eliminar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
