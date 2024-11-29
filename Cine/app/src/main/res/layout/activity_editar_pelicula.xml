@@ -1,0 +1,59 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Título de la película -->
+    <EditText
+        android:id="@+id/editPeliculaTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Título"
+        android:textSize="18sp" />
+
+    <!-- Género de la película -->
+    <Spinner
+        android:id="@+id/editPeliculaGenero"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!-- Sinopsis de la película -->
+    <EditText
+        android:id="@+id/editPeliculaSinopsis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Sinopsis"
+        android:textSize="16sp"
+        android:inputType="textMultiLine" />
+
+    <!-- Duración de la película -->
+    <EditText
+        android:id="@+id/editPeliculaDuracion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Duración (minutos)"
+        android:inputType="number" />
+
+    <!-- Rating de la película -->
+    <RatingBar
+        android:id="@+id/editPeliculaPuntuacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:stepSize="0.5" />
+
+    <Button
+        android:id="@+id/guardarEdicion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Guardar"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/cancelarEdicion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cancelar"
+        android:layout_marginTop="8dp" />
+</LinearLayout>

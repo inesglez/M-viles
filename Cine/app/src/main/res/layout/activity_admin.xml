@@ -5,7 +5,7 @@
     android:background="#FFFFFF"
     android:orientation="vertical">
 
-    <!-- RecyclerView para mostrar la cartelera -->
+    <!-- Toolbar para el encabezado -->
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -28,32 +28,9 @@
             android:textStyle="bold" />
     </androidx.appcompat.widget.Toolbar>
 
-    <LinearLayout
+    <!-- RecyclerView para mostrar la cartelera -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewCartelera"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp">
-
-        <!-- Botón "Ver lista de películas" -->
-        <Button
-            android:id="@+id/btnVerLista"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Ver lista de películas" />
-
-        <!-- Botón "Eliminar películas" -->
-        <Button
-            android:id="@+id/btnEliminar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Eliminar películas" />
-
-        <!-- Botón "Agregar películas" -->
-        <Button
-            android:id="@+id/btnAgregar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Agregar películas" />
-    </LinearLayout>
-
+        android:layout_height="match_parent" />
 </LinearLayout>

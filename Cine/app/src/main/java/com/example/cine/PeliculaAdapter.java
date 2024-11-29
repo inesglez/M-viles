@@ -14,6 +14,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
+import android.app.AlertDialog;
+import android.widget.Toast;
 
 public class PeliculaAdapter extends RecyclerView.Adapter<PeliculaAdapter.PeliculaViewHolder> {
 
@@ -29,26 +31,22 @@ public class PeliculaAdapter extends RecyclerView.Adapter<PeliculaAdapter.Pelicu
     @NonNull
     @Override
     public PeliculaViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        // Inflar el layout de cada item
         View view = LayoutInflater.from(context).inflate(R.layout.item_pelicula, parent, false);
         return new PeliculaViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull PeliculaViewHolder holder, int position) {
-        // Obtener el objeto pelicula en la posición actual
         Pelicula pelicula = peliculas.get(position);
 
-        // Establecer los datos en los elementos de la vista
         holder.titulo.setText(pelicula.getTitulo());
         holder.genero.setText(pelicula.getGenero());
         holder.puntuacion.setRating(pelicula.getPuntuacion());
 
-        // Cargar la imagen desde el recurso con redimensionamiento
-        Bitmap bitmap = decodeSampledBitmapFromResource(context.getResources(), pelicula.getImagenResId(), 100, 150); // Redimensionamos a 100x150
+        Bitmap bitmap = decodeSampledBitmapFromResource(context.getResources(), pelicula.getImagenResId(), 100, 150);
         holder.imagen.setImageBitmap(bitmap);
 
-        // Configurar el clic para abrir la pantalla de detalles
+        // Clic para ver detalles de la película (sin cambios)
         holder.itemView.setOnClickListener(v -> {
             Intent intent = new Intent(context, DetallePeliculaActivity.class);
             intent.putExtra("titulo", pelicula.getTitulo());
@@ -59,27 +57,54 @@ public class PeliculaAdapter extends RecyclerView.Adapter<PeliculaAdapter.Pelicu
             intent.putExtra("imagenResId", pelicula.getImagenResId());
             context.startActivity(intent);
         });
+
+        // Clic largo para mostrar menú de edición y eliminación
+        holder.itemView.setOnLongClickListener(v -> {
+            new AlertDialog.Builder(context)
+                    .setTitle("Acciones sobre la Película")
+                    .setItems(new CharSequence[] {"Editar", "Eliminar"}, (dialog, which) -> {
+                        if (which == 0) {
+                            // Acción de Editar
+                            Intent intent = new Intent(context, EditarPeliculaActivity.class);
+                            intent.putExtra("titulo", pelicula.getTitulo());
+                            intent.putExtra("sinopsis", pelicula.getSinopsis());
+                            intent.putExtra("genero", pelicula.getGenero());
+                            intent.putExtra("duracion", pelicula.getDuracion());
+                            intent.putExtra("puntuacion", pelicula.getPuntuacion());
+                            intent.putExtra("imagenResId", pelicula.getImagenResId());
+                            context.startActivity(intent);
+                        } else if (which == 1) {
+                            // Acción de Eliminar
+                            eliminarPelicula(position);
+                        }
+                    })
+                    .show();
+            return true; // Indicar que el evento ha sido consumido
+        });
     }
 
     @Override
     public int getItemCount() {
-        // Devuelve el número total de elementos en la lista de películas
         return peliculas.size();
     }
 
-    // ViewHolder para los elementos de la lista
+    // Método para eliminar una película
+    private void eliminarPelicula(int position) {
+        peliculas.remove(position); // Eliminar de la lista
+        notifyItemRemoved(position); // Notificar al RecyclerView
+        notifyItemRangeChanged(position, peliculas.size()); // Actualizar el rango de los elementos
+        Toast.makeText(context, "Película eliminada", Toast.LENGTH_SHORT).show();
+    }
+
     public static class PeliculaViewHolder extends RecyclerView.ViewHolder {
 
-        // Elementos del layout item_pelicula.xml con los nuevos IDs
         ImageView imagen;
         TextView titulo;
         TextView genero;
         RatingBar puntuacion;
 
-        // Constructor
         public PeliculaViewHolder(View itemView) {
             super(itemView);
-
             imagen = itemView.findViewById(R.id.peliculaImagen);
             titulo = itemView.findViewById(R.id.peliculaTitulo);
             genero = itemView.findViewById(R.id.peliculaGenero);
@@ -87,26 +112,20 @@ public class PeliculaAdapter extends RecyclerView.Adapter<PeliculaAdapter.Pelicu
         }
     }
 
-    // Método para redimensionar la imagen antes de cargarla
     public Bitmap decodeSampledBitmapFromResource(Resources res, int resId, int reqWidth, int reqHeight) {
-        // Primero, decodificar solo la información del tamaño (sin cargar la imagen en memoria)
         final BitmapFactory.Options options = new BitmapFactory.Options();
         options.inJustDecodeBounds = true;
         BitmapFactory.decodeResource(res, resId, options);
 
-        // Calcular el factor de escala adecuado
         final int inSampleSize = calculateInSampleSize(options, reqWidth, reqHeight);
 
-        // Decodificar la imagen real con el tamaño ajustado
         options.inJustDecodeBounds = false;
         options.inSampleSize = inSampleSize;
 
         return BitmapFactory.decodeResource(res, resId, options);
     }
 
-    // Método para calcular el tamaño de la muestra
     public int calculateInSampleSize(BitmapFactory.Options options, int reqWidth, int reqHeight) {
-        // Calcular el tamaño de muestra más cercano para ajustarse a los límites
         final int height = options.outHeight;
         final int width = options.outWidth;
         int inSampleSize = 1;
@@ -115,7 +134,6 @@ public class PeliculaAdapter extends RecyclerView.Adapter<PeliculaAdapter.Pelicu
             final int halfHeight = height / 2;
             final int halfWidth = width / 2;
 
-            // Asegurarse de que la imagen se ajusta al tamaño necesario
             while ((halfHeight / inSampleSize) > reqHeight && (halfWidth / inSampleSize) > reqWidth) {
                 inSampleSize *= 2;
             }

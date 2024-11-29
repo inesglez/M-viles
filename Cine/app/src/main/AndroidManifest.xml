@@ -36,9 +36,9 @@
             android:exported="true">
         </activity>
 
-        <!-- EliminarPeliculaActivity, para eliminar películas -->
+        <!-- EliminarPeliculaActivity, para añadir películas -->
         <activity
-            android:name=".EliminarPeliculaActivity"
+            android:name=".AñadirPelicula"
             android:exported="true">
         </activity>
 
@@ -46,6 +46,12 @@
         <activity
             android:name=".DetallePeliculaActivity"
             android:exported="false">
+        </activity>
+
+        <!-- Añadir la actividad EditarPeliculaActivity -->
+        <activity
+            android:name=".EditarPeliculaActivity"
+            android:exported="true">
         </activity>
 
     </application>
