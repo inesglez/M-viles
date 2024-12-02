@@ -46,7 +46,7 @@ public class PeliculaAdapter extends RecyclerView.Adapter<PeliculaAdapter.Pelicu
         Bitmap bitmap = decodeSampledBitmapFromResource(context.getResources(), pelicula.getImagenResId(), 100, 150);
         holder.imagen.setImageBitmap(bitmap);
 
-        // Clic para ver detalles de la película (sin cambios)
+        // Clic para ver detalles de la película
         holder.itemView.setOnClickListener(v -> {
             Intent intent = new Intent(context, DetallePeliculaActivity.class);
             intent.putExtra("titulo", pelicula.getTitulo());
@@ -62,7 +62,7 @@ public class PeliculaAdapter extends RecyclerView.Adapter<PeliculaAdapter.Pelicu
         holder.itemView.setOnLongClickListener(v -> {
             new AlertDialog.Builder(context)
                     .setTitle("Acciones sobre la Película")
-                    .setItems(new CharSequence[] {"Editar", "Eliminar"}, (dialog, which) -> {
+                    .setItems(new CharSequence[]{"Editar", "Eliminar"}, (dialog, which) -> {
                         if (which == 0) {
                             // Acción de Editar
                             Intent intent = new Intent(context, EditarPeliculaActivity.class);
@@ -74,8 +74,8 @@ public class PeliculaAdapter extends RecyclerView.Adapter<PeliculaAdapter.Pelicu
                             intent.putExtra("imagenResId", pelicula.getImagenResId());
                             context.startActivity(intent);
                         } else if (which == 1) {
-                            // Acción de Eliminar
-                            eliminarPelicula(position);
+                            // Acción de Eliminar con confirmación
+                            mostrarDialogoConfirmacion(position);
                         }
                     })
                     .show();
@@ -86,6 +86,22 @@ public class PeliculaAdapter extends RecyclerView.Adapter<PeliculaAdapter.Pelicu
     @Override
     public int getItemCount() {
         return peliculas.size();
+    }
+
+    // Método para mostrar un diálogo de confirmación antes de eliminar
+    private void mostrarDialogoConfirmacion(int position) {
+        new AlertDialog.Builder(context)
+                .setTitle("Confirmar eliminación")
+                .setMessage("¿Estás seguro de que deseas eliminar esta película?")
+                .setPositiveButton("Sí", (dialog, which) -> {
+                    // Si el usuario confirma, eliminar la película
+                    eliminarPelicula(position);
+                })
+                .setNegativeButton("No", (dialog, which) -> {
+                    // Si el usuario cancela, cerrar el cuadro de diálogo
+                    dialog.dismiss();
+                })
+                .show();
     }
 
     // Método para eliminar una película

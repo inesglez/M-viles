@@ -7,9 +7,9 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/cinemania"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/cinemania"
         android:supportsRtl="true"
         android:theme="@style/Theme.Cine"
         tools:targetApi="31">
@@ -24,33 +24,45 @@
             </intent-filter>
         </activity>
 
-        <!-- MainActivity, sin el intent-filter, para que se inicie solo después de autenticación -->
+        <!-- MainActivity -->
         <activity
             android:name=".MainActivity"
             android:exported="true">
         </activity>
 
-        <!-- AdminActivity, para el administrador -->
+        <!-- AdminActivity -->
         <activity
             android:name=".AdminActivity"
             android:exported="true">
         </activity>
 
-        <!-- EliminarPeliculaActivity, para añadir películas -->
+        <!-- AñadirPeliculaActivity -->
         <activity
             android:name=".AñadirPelicula"
             android:exported="true">
         </activity>
 
-        <!-- Declarar la actividad de detalles de la película -->
+        <!-- DetallePeliculaActivity -->
         <activity
             android:name=".DetallePeliculaActivity"
             android:exported="false">
         </activity>
 
-        <!-- Añadir la actividad EditarPeliculaActivity -->
+        <!-- EditarPeliculaActivity -->
         <activity
             android:name=".EditarPeliculaActivity"
+            android:exported="true">
+        </activity>
+
+        <!-- EntradasActivity -->
+        <activity
+            android:name=".EntradasActivity"
+            android:exported="true">
+        </activity>
+
+        <!-- PerfilActivity -->
+        <activity
+            android:name=".PerfilActivity"
             android:exported="true">
         </activity>
 

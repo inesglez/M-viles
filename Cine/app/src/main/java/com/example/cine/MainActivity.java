@@ -53,16 +53,25 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.cerrar_sesion) {
-            // Al seleccionar "Cerrar sesión", redirigimos a LoginActivity
+            // Cerrar sesión y regresar a LoginActivity
             Intent intent = new Intent(MainActivity.this, LoginActivity.class);
             startActivity(intent);
-            finish(); // Finalizamos la actividad actual (MainActivity)
+            finish();
             return true;
         } else if (item.getItemId() == R.id.perfil) {
-            // Acción para el perfil
+            // Abrir la actividad PerfilActivity
+            Intent intent = new Intent(MainActivity.this, PerfilActivity.class);
+            startActivity(intent);
+            return true;
+        } else if (item.getItemId() == R.id.entradas) {
+            // Navegar a EntradasActivity
+            Intent intent = new Intent(MainActivity.this, EntradasActivity.class);
+            startActivity(intent);
             return true;
         } else {
             return super.onOptionsItemSelected(item);
         }
     }
+
+
 }
