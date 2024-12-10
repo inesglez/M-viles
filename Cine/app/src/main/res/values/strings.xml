@@ -7,4 +7,9 @@
     <string name="puntuacion">Puntuación</string>
     <string name="guardar">Guardar</string>
     <string name="cancelar">Cancelar</string>
+
+    <string name="seleccionar_idioma">Seleciona Idioma</string>
+    <string name="idioma_espanol">Español</string>
+    <string name="idioma_ingles">Inglés</string>
+    <string name="idioma_frances">Francés</string>
 </resources>

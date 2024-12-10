@@ -7,4 +7,10 @@
     <string name="puntuacion">Évaluation</string>
     <string name="guardar">Enregistrer</string>
     <string name="cancelar">Annuler</string>
+
+    <!-- Agregar las cadenas para el cambio de idioma -->
+    <string name="seleccionar_idioma">Sélectionner la langue</string> <!-- "Select Language" en francés -->
+    <string name="idioma_espanol">Espagnol</string> <!-- "Spanish" en francés -->
+    <string name="idioma_ingles">Anglais</string> <!-- "English" en francés -->
+    <string name="idioma_frances">Français</string> <!-- "French" en francés -->
 </resources>

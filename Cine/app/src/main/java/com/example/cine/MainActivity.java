@@ -1,15 +1,19 @@
 package com.example.cine;
 
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
@@ -76,6 +80,21 @@ public class MainActivity extends AppCompatActivity {
             // Ordenar las películas por calificación
             ordenarPeliculasPorCalificacion();
             return true;
+        } else if (item.getItemId() == R.id.idioma_es) {
+            // Cambiar idioma a español
+            cambiarIdioma("es");
+            mostrarToast("Idioma cambiado a Español");
+            return true;
+        } else if (item.getItemId() == R.id.idioma_en) {
+            // Cambiar idioma a inglés
+            cambiarIdioma("en");
+            mostrarToast("Idioma cambiado a Inglés");
+            return true;
+        } else if (item.getItemId() == R.id.idioma_fr) {
+            // Cambiar idioma a francés
+            cambiarIdioma("fr");
+            mostrarToast("Idioma cambiado a Francés");
+            return true;
         } else {
             return super.onOptionsItemSelected(item);
         }
@@ -91,5 +110,37 @@ public class MainActivity extends AppCompatActivity {
     private void ordenarPeliculasPorCalificacion() {
         peliculaList.sort((p1, p2) -> Float.compare(p2.getPuntuacion(), p1.getPuntuacion())); // Orden descendente
         peliculaAdapter.notifyDataSetChanged(); // Notificar al adaptador que los datos han cambiado
+    }
+
+    // Método para cambiar el idioma de la aplicación
+    private void cambiarIdioma(String idioma) {
+        Locale locale;
+        switch (idioma) {
+            case "es":
+                locale = new Locale("es"); // Español
+                break;
+            case "en":
+                locale = new Locale("en"); // Inglés
+                break;
+            case "fr":
+                locale = new Locale("fr"); // Francés
+                break;
+            default:
+                locale = Locale.getDefault(); // Por defecto
+                break;
+        }
+
+        // Cambiar la configuración de la aplicación a la nueva localidad
+        Locale.setDefault(locale);
+        Configuration config = new Configuration();
+        config.setLocale(locale);  // Usa setLocale en lugar de config.locale = locale
+        getResources().updateConfiguration(config, getResources().getDisplayMetrics());
+
+        recreate(); // Esto recrea la actividad actual con la configuración de idioma cambiada
+    }
+
+    // Método para mostrar un Toast
+    private void mostrarToast(String mensaje) {
+        Toast.makeText(this, mensaje, Toast.LENGTH_SHORT).show();
     }
 }
