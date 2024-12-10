@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         peliculaList.add(new Pelicula("Gru, Mi Villano Favorito", "Gru planea el mayor atraco de la historia, mientras cría a tres niñas huérfanas.", "Animación", 95, 4.7f, R.drawable.gru));
         peliculaList.add(new Pelicula("Smile", "Una joven psiquiatra enfrenta aterradoras visiones tras un evento traumático.", "Terror", 110, 4.0f, R.drawable.smile));
         peliculaList.add(new Pelicula("Venom", "Un periodista adquiere poderes tras fusionarse con un simbionte alienígena.", "Acción/Sci-Fi", 112, 3.8f, R.drawable.venom));
-        peliculaList.add(new Pelicula( "Joker", "Historia oscura sobre la evolución de Arthur Fleck en el icónico Joker.", "Drama", 122, 1.5f, R.drawable.joker));
+        peliculaList.add(new Pelicula("Joker", "Historia oscura sobre la evolución de Arthur Fleck en el icónico Joker.", "Drama", 122, 1.5f, R.drawable.joker));
 
         // Configurar el adaptador con el contexto y la lista de películas
         peliculaAdapter = new PeliculaAdapter(this, peliculaList);
@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
-    // Manejar la acción del menú, como "Cerrar sesión" o "Perfil"
+    // Manejar la acción del menú, incluyendo "Ordenar por duración" y "Ordenar por calificación"
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.cerrar_sesion) {
@@ -68,10 +68,28 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this, EntradasActivity.class);
             startActivity(intent);
             return true;
+        } else if (item.getItemId() == R.id.ordenar_duracion) {
+            // Ordenar las películas por duración
+            ordenarPeliculasPorDuracion();
+            return true;
+        } else if (item.getItemId() == R.id.ordenar_calificacion) {
+            // Ordenar las películas por calificación
+            ordenarPeliculasPorCalificacion();
+            return true;
         } else {
             return super.onOptionsItemSelected(item);
         }
     }
 
+    // Método para ordenar las películas por duración
+    private void ordenarPeliculasPorDuracion() {
+        peliculaList.sort((p1, p2) -> Integer.compare(p1.getDuracion(), p2.getDuracion()));
+        peliculaAdapter.notifyDataSetChanged(); // Notificar al adaptador que los datos han cambiado
+    }
 
+    // Método para ordenar las películas por calificación
+    private void ordenarPeliculasPorCalificacion() {
+        peliculaList.sort((p1, p2) -> Float.compare(p2.getPuntuacion(), p1.getPuntuacion())); // Orden descendente
+        peliculaAdapter.notifyDataSetChanged(); // Notificar al adaptador que los datos han cambiado
+    }
 }

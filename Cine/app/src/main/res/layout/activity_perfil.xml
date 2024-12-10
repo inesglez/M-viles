@@ -65,7 +65,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:hint="Nombre de usuario"
-                android:text="JuanP_1990"
+                android:text="inesglezz_28"
                 android:background="@drawable/borde_campo"
                 android:padding="12dp"/>
         </LinearLayout>
@@ -89,7 +89,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:hint="Correo electrónico"
-                android:text="juanperez@email.com"
+                android:text="ines@email.com"
                 android:inputType="textEmailAddress"
                 android:background="@drawable/borde_campo"
                 android:padding="12dp"/>

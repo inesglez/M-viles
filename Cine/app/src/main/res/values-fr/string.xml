@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name"></string>
+    <string name="titulo">Titre</string>
+    <string name="sinopsis">Synopsis</string>
+    <string name="genero">Genre</string>
+    <string name="duracion">Durée (minutes)</string>
+    <string name="puntuacion">Évaluation</string>
+    <string name="guardar">Enregistrer</string>
+    <string name="cancelar">Annuler</string>
+</resources>
