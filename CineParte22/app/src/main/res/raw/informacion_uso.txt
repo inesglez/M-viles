@@ -1,0 +1,4 @@
+Bienvenido a la Aplicación de Cine. Aquí puedes:
+- Gestionar películas.
+- Editar y eliminar contenido.
+- Personalizar tu perfil.

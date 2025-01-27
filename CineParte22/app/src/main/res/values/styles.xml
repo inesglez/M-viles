@@ -1,0 +1,17 @@
+<resources>
+    <!-- Tema para el modo oscuro -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Color primario en modo oscuro -->
+        <item name="colorPrimary">@color/color_primario</item>
+
+        <!-- Color de acento en modo oscuro -->
+        <item name="colorAccent">@color/color_acento</item>
+        <!-- Fondo de la aplicación en modo oscuro -->
+        <item name="android:windowBackground">@color/fondo_claro</item>
+
+        <!-- Estilos para botones, adaptados al modo oscuro -->
+        <item name="android:buttonStyle">@style/Widget.MaterialComponents.Button</item>
+        <!-- Forzar el modo oscuro -->
+        <item name="android:forceDarkAllowed">true</item>
+    </style>
+</resources>

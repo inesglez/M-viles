@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundGradient">
+
+    <!-- Logo centrado arriba -->
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="303dp"
+        android:layout_height="252dp"
+        android:layout_marginTop="60dp"
+        android:contentDescription="Logo de Cinemanía"
+        android:src="@drawable/cinemania"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Contenedor con fondo más ancho y opaco -->
+    <LinearLayout
+        android:id="@+id/loginContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/rounded_opacity_bg"
+        android:elevation="12dp"
+        android:orientation="vertical"
+        android:padding="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo"
+        app:layout_constraintWidth_percent="0.9">
+
+        <!-- Campo de texto para el nombre de usuario -->
+        <EditText
+            android:id="@+id/inputNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/edit_text_rounded"
+            android:fontFamily="sans-serif-medium"
+            android:hint="Nombre de usuario"
+            android:imeOptions="actionNext"
+            android:padding="15dp"
+            android:textColor="#333333"
+            android:textColorHint="#AAAAAA"
+            android:textSize="18sp" />
+
+        <!-- Campo de texto para la clave de usuario -->
+        <EditText
+            android:id="@+id/inputClave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/edit_text_rounded"
+            android:fontFamily="sans-serif-medium"
+            android:hint="Clave de usuario"
+            android:imeOptions="actionDone"
+            android:inputType="textPassword"
+            android:padding="15dp"
+            android:textColor="#333333"
+            android:textColorHint="#AAAAAA"
+            android:textSize="18sp" />
+
+        <!-- Botón de inicio de sesión -->
+        <Button
+            android:id="@+id/btnIniciarSesion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/button_rounded"
+            android:text="Iniciar sesión"
+            android:textColor="#FFFFFF"
+            android:textSize="19sp" />
+
+        <!-- Botón de información -->
+        <Button
+            android:id="@+id/btnInformacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/button_rounded"
+            android:text="Información"
+            android:textColor="#FFFFFF"
+            android:textSize="19sp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

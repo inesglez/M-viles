@@ -1,0 +1,23 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- RecyclerView para la lista de películas -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewCartelera"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- TextView para mostrar la información del archivo -->
+    <TextView
+        android:id="@+id/textViewInformacionUso"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Información de uso"
+        android:textSize="16sp"
+        android:padding="8dp" />
+
+</LinearLayout>

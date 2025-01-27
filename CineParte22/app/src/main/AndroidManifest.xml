@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.cineparte2">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/cinemania"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/cinemania"
+        android:supportsRtl="true"
+        android:theme="@style/Base.Theme.Cine"
+        tools:targetApi="31">
+
+        <!-- Declarar LoginActivity como actividad principal -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- MainActivity -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+        </activity>
+
+        <!-- AdminActivity -->
+        <activity
+            android:name=".AdminActivity"
+            android:exported="true">
+        </activity>
+
+        <!-- AñadirPeliculaActivity -->
+        <activity
+            android:name=".AñadirPelicula"
+            android:exported="true">
+        </activity>
+
+        <!-- DetallePeliculaActivity -->
+        <activity
+            android:name=".DetallePeliculaActivity"
+            android:exported="false">
+        </activity>
+
+        <!-- EditarPeliculaActivity -->
+        <activity
+            android:name=".EditarPeliculaActivity"
+            android:exported="true">
+        </activity>
+
+        <!-- EntradasActivity -->
+        <activity
+            android:name=".EntradasActivity"
+            android:exported="true">
+        </activity>
+
+        <!-- PerfilActivity -->
+        <activity
+            android:name=".PerfilActivity"
+            android:exported="true">
+        </activity>
+
+    </application>
+</manifest>
