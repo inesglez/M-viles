@@ -6,15 +6,17 @@
     android:padding="16dp">
 
     <!-- Imagen de la película -->
-    <ImageView
-        android:id="@+id/detallePeliculaImagen"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_gravity="center"
-        android:scaleType="centerCrop"
-        android:contentDescription="@string/app_name" />
 
     <!-- Título de la película -->
+
+    <ImageView
+        android:id="@+id/detallePeliculaImagen"
+        android:layout_width="477dp"
+        android:layout_height="497dp"
+        android:layout_gravity="center"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerCrop" />
+
     <TextView
         android:id="@+id/detallePeliculaTitulo"
         android:layout_width="match_parent"

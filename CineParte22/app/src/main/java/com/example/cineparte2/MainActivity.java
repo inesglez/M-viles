@@ -57,7 +57,6 @@ public class MainActivity extends AppCompatActivity {
         peliculaList.add(new Pelicula("Smile", "Una joven psiquiatra enfrenta aterradoras visiones tras un evento traumático.", "Terror", 110, 4.0f, R.drawable.smile));
         peliculaList.add(new Pelicula("Venom", "Un periodista adquiere poderes tras fusionarse con un simbionte alienígena.", "Acción/Sci-Fi", 112, 3.8f, R.drawable.venom));
         peliculaList.add(new Pelicula("Joker", "Historia oscura sobre la evolución de Arthur Fleck en el icónico Joker.", "Drama", 122, 1.5f, R.drawable.joker));
-        peliculaList.add(new Pelicula("aaa", "aaaaaaaaaaa", "Drama", 1, 1f, R.drawable.cinemania));
     }
 
     private void mostrarInformacionUso() {
