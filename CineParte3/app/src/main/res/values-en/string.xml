@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name"></string>
+    <string name="titulo">Title</string>
+    <string name="sinopsis">Synopsis</string>
+    <string name="genero">Genre</string>
+    <string name="duracion">Duration (minutes)</string>
+    <string name="puntuacion">Rating</string>
+    <string name="guardar">Save</string>
+    <string name="cancelar">Cancel</string>
+
+    <!-- Agregar las cadenas para el cambio de idioma -->
+    <string name="seleccionar_idioma">Select Language</string>
+    <string name="idioma_espanol">Spanish</string>
+    <string name="idioma_ingles">English</string>
+    <string name="idioma_frances">French</string>
+</resources>
