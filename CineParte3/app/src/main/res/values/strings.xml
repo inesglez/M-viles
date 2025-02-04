@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name"></string>
+    <string name="titulo">Título</string>
+    <string name="sinopsis">Sinopsis</string>
+    <string name="genero">Género</string>
+    <string name="duracion">Duración (minutos)</string>
+    <string name="puntuacion">Puntuación</string>
+    <string name="guardar">Guardar</string>
+    <string name="cancelar">Cancelar</string>
+
+    <string name="seleccionar_idioma">Seleciona Idioma</string>
+    <string name="idioma_espanol">Español</string>
+    <string name="idioma_ingles">Inglés</string>
+    <string name="idioma_frances">Francés</string>
+</resources>

@@ -301,6 +301,7 @@
           <option name="codename" value="maui" />
           <option name="id" value="maui" />
           <option name="labId" value="google" />
+
           <option name="manufacturer" value="Motorola" />
           <option name="name" value="moto g play - 2023" />
           <option name="screenDensity" value="280" />
