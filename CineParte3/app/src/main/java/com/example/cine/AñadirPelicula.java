@@ -1,7 +1,9 @@
 package com.example.cine;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -13,12 +15,17 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.io.ByteArrayOutputStream;
+
 public class AñadirPelicula extends AppCompatActivity {
 
     private EditText etTitulo, etSinopsis, etDuracion, etPuntuacion;
     private Spinner spinnerGenero;
-    private Button btnGuardar, btnCancelar;
+    private Button btnGuardar, btnCancelar, btnTomarFoto;
     private ImageView imgPelicula;
+
+    private static final int REQUEST_IMAGE_CAPTURE = 1;
+    private Bitmap imagenCapturada = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,12 +41,14 @@ public class AñadirPelicula extends AppCompatActivity {
         imgPelicula = findViewById(R.id.imgPelicula);
         btnGuardar = findViewById(R.id.btnGuardar);
         btnCancelar = findViewById(R.id.btnCancelar);
+        btnTomarFoto = findViewById(R.id.btnTomarFoto);
 
         // Configurar Spinner
         String[] generos = {"Acción", "Comedia", "Drama", "Ciencia Ficción", "Terror"};
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, generos);
         spinnerGenero.setAdapter(adapter);
 
+        // Acción del Spinner
         spinnerGenero.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
@@ -52,6 +61,7 @@ public class AñadirPelicula extends AppCompatActivity {
             }
         });
 
+        // Acción del botón para guardar
         btnGuardar.setOnClickListener(view -> {
             String titulo = etTitulo.getText().toString().trim();
             String sinopsis = etSinopsis.getText().toString().trim();
@@ -69,8 +79,18 @@ public class AñadirPelicula extends AppCompatActivity {
                 String genero = spinnerGenero.getSelectedItem().toString();
                 int imagen = obtenerImagenSeleccionada();
 
-                Pelicula nuevaPelicula = new Pelicula(titulo, sinopsis, genero, duracion, puntuacion, imagen);
+                // Convertir Bitmap a byte[]
+                byte[] imagenBytes = null;
+                if (imagenCapturada != null) {
+                    ByteArrayOutputStream stream = new ByteArrayOutputStream();
+                    imagenCapturada.compress(Bitmap.CompressFormat.PNG, 100, stream);
+                    imagenBytes = stream.toByteArray();
+                }
 
+                // Crear nueva película
+                Pelicula nuevaPelicula = new Pelicula(titulo, sinopsis, genero, duracion, puntuacion, imagen, imagenBytes);
+
+                // Enviar la película a la otra actividad
                 Intent intent = new Intent();
                 intent.putExtra("pelicula", nuevaPelicula);
                 setResult(RESULT_OK, intent);
@@ -80,31 +100,40 @@ public class AñadirPelicula extends AppCompatActivity {
             }
         });
 
+        // Acción del botón de cancelar
         btnCancelar.setOnClickListener(v -> finish());
+
+        // Acción del botón para tomar una foto
+        btnTomarFoto.setOnClickListener(v -> {
+            Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+            if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
+                startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
+            }
+        });
+    }
+
+    // Método para manejar el resultado de la foto
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
+            Bundle extras = data.getExtras();
+            imagenCapturada = (Bitmap) extras.get("data");
+            imgPelicula.setImageBitmap(imagenCapturada); // Mostrar la imagen capturada en el ImageView
+        }
     }
 
     private int obtenerImagenSeleccionada() {
         String generoSeleccionado = spinnerGenero.getSelectedItem().toString();
-
-        // Validar si se seleccionó un género válido
-        if (generoSeleccionado.equals("Género")) {
-            return -1; // Valor inválido, puedes manejar esto como prefieras
-        }
-
-        // Retornar imagen según el género seleccionado
         switch (generoSeleccionado) {
             case "Acción":
-                return R.drawable.cinemania;
             case "Comedia":
-                return R.drawable.cinemania;
             case "Drama":
-                return R.drawable.cinemania;
             case "Ciencia Ficción":
-                return R.drawable.cinemania;
             case "Terror":
                 return R.drawable.cinemania;
             default:
-                return R.drawable.cinemania; // Imagen predeterminada
+                return R.drawable.cinemania;
         }
     }
-    }
+}

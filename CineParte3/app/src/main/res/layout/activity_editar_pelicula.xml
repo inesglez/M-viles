@@ -4,7 +4,16 @@
     android:orientation="vertical"
     android:padding="16dp">
 
-    <!-- Título de la película -->
+    <ImageView
+        android:id="@+id/editPeliculaImagen"
+        android:layout_width="278dp"
+        android:layout_height="272dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/cinemania" />
+
     <EditText
         android:id="@+id/editPeliculaTitulo"
         android:layout_width="match_parent"
@@ -12,34 +21,35 @@
         android:hint="Título"
         android:textSize="18sp" />
 
-    <!-- Género de la película -->
     <Spinner
         android:id="@+id/editPeliculaGenero"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"/>
 
-    <!-- Sinopsis de la película -->
     <EditText
         android:id="@+id/editPeliculaSinopsis"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="380dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="8dp"
         android:hint="Sinopsis"
-        android:textSize="16sp"
-        android:inputType="textMultiLine" />
+        android:inputType="textMultiLine"
+        android:lines="3"
+        android:textSize="16sp" />
 
-    <!-- Duración de la película -->
     <EditText
         android:id="@+id/editPeliculaDuracion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Duración (minutos)"
-        android:inputType="number" />
+        android:inputType="number"
+        android:layout_marginTop="8dp"/>
 
-    <!-- Rating de la película -->
     <RatingBar
         android:id="@+id/editPeliculaPuntuacion"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
         android:numStars="5"
         android:stepSize="0.5" />
 
@@ -56,4 +66,5 @@
         android:layout_height="wrap_content"
         android:text="Cancelar"
         android:layout_marginTop="8dp" />
+
 </LinearLayout>

@@ -8,15 +8,18 @@ public class Pelicula implements Serializable {
     private String genero;
     private int duracion;
     private float puntuacion;
-    private int imagenResId; // ID de la imagen
+    private int imagenResId; // ID de la imagen (recurso de drawable)
+    private byte[] imagenCapturada; // Imagen tomada con la cámara en formato byte[]
 
-    public Pelicula(String titulo, String sinopsis, String genero, int duracion, float puntuacion, int imagenResId) {
+    // Constructor con imagen capturada
+    public Pelicula(String titulo, String sinopsis, String genero, int duracion, float puntuacion, int imagenResId, byte[] imagenCapturada) {
         this.titulo = titulo;
         this.sinopsis = sinopsis;
         this.genero = genero;
         this.duracion = duracion;
         this.puntuacion = puntuacion;
         this.imagenResId = imagenResId;
+        this.imagenCapturada = imagenCapturada;
     }
 
     // Getters y Setters
@@ -67,4 +70,16 @@ public class Pelicula implements Serializable {
     public void setImagenResId(int imagenResId) {
         this.imagenResId = imagenResId;
     }
+
+    public byte[] getImagenCapturada() {
+        return imagenCapturada;
+    }
+
+    public void setImagenCapturada(byte[] imagenCapturada) {
+        this.imagenCapturada = imagenCapturada;
+    }
+    public byte[] getImagenBytes() { return imagenCapturada; }
+    public void setImagenBytes(byte[] imagenBytes) { this.imagenCapturada= imagenCapturada; }
+
 }
+

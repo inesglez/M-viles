@@ -11,9 +11,12 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
 import java.util.List;
+
 import android.app.AlertDialog;
 import android.widget.Toast;
 
@@ -22,7 +25,6 @@ public class PeliculaAdapter extends RecyclerView.Adapter<PeliculaAdapter.Pelicu
     private Context context;
     private List<Pelicula> peliculas;
 
-    // Constructor
     public PeliculaAdapter(Context context, List<Pelicula> peliculas) {
         this.context = context;
         this.peliculas = peliculas;
@@ -43,10 +45,16 @@ public class PeliculaAdapter extends RecyclerView.Adapter<PeliculaAdapter.Pelicu
         holder.genero.setText(pelicula.getGenero());
         holder.puntuacion.setRating(pelicula.getPuntuacion());
 
-        Bitmap bitmap = decodeSampledBitmapFromResource(context.getResources(), pelicula.getImagenResId(), 100, 150);
-        holder.imagen.setImageBitmap(bitmap);
+        byte[] imagenBytes = pelicula.getImagenBytes();
 
-        // Clic para ver detalles de la película
+        if (imagenBytes != null) {
+            Bitmap bitmap = BitmapFactory.decodeByteArray(imagenBytes, 0, imagenBytes.length);
+            holder.imagen.setImageBitmap(bitmap);
+        } else {
+            Bitmap bitmap = decodeSampledBitmapFromResource(context.getResources(), pelicula.getImagenResId(), 100, 150);
+            holder.imagen.setImageBitmap(bitmap);
+        }
+
         holder.itemView.setOnClickListener(v -> {
             Intent intent = new Intent(context, DetallePeliculaActivity.class);
             intent.putExtra("titulo", pelicula.getTitulo());
@@ -58,28 +66,29 @@ public class PeliculaAdapter extends RecyclerView.Adapter<PeliculaAdapter.Pelicu
             context.startActivity(intent);
         });
 
-        // Clic largo para mostrar menú de edición y eliminación
         holder.itemView.setOnLongClickListener(v -> {
             new AlertDialog.Builder(context)
                     .setTitle("Acciones sobre la Película")
                     .setItems(new CharSequence[]{"Editar", "Eliminar"}, (dialog, which) -> {
                         if (which == 0) {
-                            // Acción de Editar
                             Intent intent = new Intent(context, EditarPeliculaActivity.class);
                             intent.putExtra("titulo", pelicula.getTitulo());
                             intent.putExtra("sinopsis", pelicula.getSinopsis());
                             intent.putExtra("genero", pelicula.getGenero());
                             intent.putExtra("duracion", pelicula.getDuracion());
                             intent.putExtra("puntuacion", pelicula.getPuntuacion());
-                            intent.putExtra("imagenResId", pelicula.getImagenResId());
+
+                            if (imagenBytes != null) { // Comprobar si imagenBytes NO es nulo
+                                intent.putExtra("imagenBytes", imagenBytes);
+                            } // Si es nulo, no se añade al Intent
+
                             context.startActivity(intent);
                         } else if (which == 1) {
-                            // Acción de Eliminar con confirmación
                             mostrarDialogoConfirmacion(position);
                         }
                     })
                     .show();
-            return true; // Indicar que el evento ha sido consumido
+            return true;
         });
     }
 
@@ -88,27 +97,23 @@ public class PeliculaAdapter extends RecyclerView.Adapter<PeliculaAdapter.Pelicu
         return peliculas.size();
     }
 
-    // Método para mostrar un diálogo de confirmación antes de eliminar
     private void mostrarDialogoConfirmacion(int position) {
         new AlertDialog.Builder(context)
                 .setTitle("Confirmar eliminación")
                 .setMessage("¿Estás seguro de que deseas eliminar esta película?")
                 .setPositiveButton("Sí", (dialog, which) -> {
-                    // Si el usuario confirma, eliminar la película
                     eliminarPelicula(position);
                 })
                 .setNegativeButton("No", (dialog, which) -> {
-                    // Si el usuario cancela, cerrar el cuadro de diálogo
                     dialog.dismiss();
                 })
                 .show();
     }
 
-    // Método para eliminar una película
     private void eliminarPelicula(int position) {
-        peliculas.remove(position); // Eliminar de la lista
-        notifyItemRemoved(position); // Notificar al RecyclerView
-        notifyItemRangeChanged(position, peliculas.size()); // Actualizar el rango de los elementos
+        peliculas.remove(position);
+        notifyItemRemoved(position);
+        notifyItemRangeChanged(position, peliculas.size());
         Toast.makeText(context, "Película eliminada", Toast.LENGTH_SHORT).show();
     }
 

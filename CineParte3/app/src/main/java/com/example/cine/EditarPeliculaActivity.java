@@ -67,10 +67,6 @@ public class EditarPeliculaActivity extends AppCompatActivity {
             int nuevaDuracion = Integer.parseInt(editDuracion.getText().toString());
             float nuevaPuntuacion = editPuntuacion.getRating();
 
-            // Aquí puedes actualizar la película en la base de datos o en el modelo
-            // Por ejemplo, si estás usando una base de datos:
-            // db.updatePelicula(id, nuevoTitulo, nuevaSinopsis, nuevoGenero, nuevaDuracion, nuevaPuntuacion);
-
             // Mostrar un mensaje de éxito
             Toast.makeText(this, "Película editada con éxito", Toast.LENGTH_SHORT).show();
             finish();
