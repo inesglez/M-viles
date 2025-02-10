@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/añadir_pelicula"
+        android:title="Añadir Pelicula" />
+    <item
+        android:id="@+id/cerrar_sesion"
+        android:title="Cerrar sesión" />
+
+</menu>

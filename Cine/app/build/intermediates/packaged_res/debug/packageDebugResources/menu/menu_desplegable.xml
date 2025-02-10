@@ -1,0 +1,41 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Otros ítems de menú -->
+    <item
+        android:id="@+id/entradas"
+        android:title="Comprar Entradas"/>
+
+    <item
+        android:id="@+id/ordenar_duracion"
+        android:title="Ordenar por duración" />
+
+    <item
+        android:id="@+id/ordenar_calificacion"
+        android:title="Ordenar por calificación" />
+
+    <item
+        android:id="@+id/perfil"
+        android:title="Perfil" />
+
+    <!-- Menú para elegir idioma -->
+    <item
+        android:id="@+id/elegirIdioma"
+        android:title="@string/seleccionar_idioma">
+        <menu>
+            <item
+                android:id="@+id/idioma_es"
+                android:title="@string/idioma_espanol" />
+            <item
+                android:id="@+id/idioma_en"
+                android:title="@string/idioma_ingles" />
+            <item
+                android:id="@+id/idioma_fr"
+                android:title="@string/idioma_frances" />
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/cerrar_sesion"
+        android:title="Cerrar sesión" />
+</menu>

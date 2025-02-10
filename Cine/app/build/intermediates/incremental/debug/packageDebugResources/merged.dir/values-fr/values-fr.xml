@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name"/>
+    <string name="cancelar">Annuler</string>
+    <string name="duracion">Durée (minutes)</string>
+    <string name="genero">Genre</string>
+    <string name="guardar">Enregistrer</string>
+    <string name="idioma_espanol">Espagnol</string>
+    <string name="idioma_frances">Français</string>
+    <string name="idioma_ingles">Anglais</string>
+    <string name="puntuacion">Évaluation</string>
+    <string name="seleccionar_idioma">Sélectionner la langue</string>
+    <string name="sinopsis">Synopsis</string>
+    <string name="titulo">Titre</string>
+</resources>

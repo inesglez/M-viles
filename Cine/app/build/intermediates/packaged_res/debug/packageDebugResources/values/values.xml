@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="backgroundGradient">#FFEBEE</color>
+    <color name="color_acento">#03DAC5</color>
+    <color name="color_primario">#6200EE</color>
+    <color name="fondo_claro">#F9F9F9</color>
+    <color name="hintColor">#AAAAAA</color>
+    <color name="primary">#FFA726</color>
+    <color name="primaryDark">#FF6F00</color>
+    <color name="toolbar_color">#3F51B5</color>
+    <string name="app_name"/>
+    <string name="cancelar">Cancelar</string>
+    <string name="duracion">Duración (minutos)</string>
+    <string name="genero">Género</string>
+    <string name="guardar">Guardar</string>
+    <string name="idioma_espanol">Español</string>
+    <string name="idioma_frances">Francés</string>
+    <string name="idioma_ingles">Inglés</string>
+    <string name="puntuacion">Puntuación</string>
+    <string name="seleccionar_idioma">Seleciona Idioma</string>
+    <string name="sinopsis">Sinopsis</string>
+    <string name="titulo">Título</string>
+    <style name="Base.Theme.Cine" parent="Theme.Material3.DayNight.NoActionBar">
+        
+        
+    </style>
+    <style name="Theme.Cine" parent="Base.Theme.Cine"/>
+</resources>

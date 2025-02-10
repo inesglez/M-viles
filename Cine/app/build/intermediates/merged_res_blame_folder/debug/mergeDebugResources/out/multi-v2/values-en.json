@@ -1,0 +1,26 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.example.cine.app-mergeDebugResources-30:/values-en/values-en.xml",
+            "map": [
+                {
+                    "source": "/home/usuario/AndroidStudioProjects/Cine/app/src/main/res/values-en/string.xml",
+                    "from": {
+                        "startLines": "1,8,5,4,7,12,14,13,6,11,3,2",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "16,325,182,141,284,491,592,542,238,428,95,54",
+                        "endColumns": "37,43,55,40,40,50,49,49,45,62,45,40",
+                        "endOffsets": "49,364,233,177,320,537,637,587,279,486,136,90"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,85,129,185,226,267,318,368,418,464,527,573",
+                        "endColumns": "29,43,55,40,40,50,49,49,45,62,45,40",
+                        "endOffsets": "80,124,180,221,262,313,363,413,459,522,568,609"
+                    }
+                }
+            ]
+        }
+    ]
+}

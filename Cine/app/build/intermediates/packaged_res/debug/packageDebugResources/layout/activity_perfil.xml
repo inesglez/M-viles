@@ -1,0 +1,171 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo_claro"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- Imagen de perfil -->
+        <ImageView
+            android:id="@+id/imageViewPerfil"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/foto_perfil"
+            android:scaleType="centerCrop"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/borde_imagen_redondeado" />
+
+        <!-- Nombre completo (solo lectura) -->
+        <TextView
+            android:id="@+id/textViewNombreCompleto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Inés González"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+            android:padding="7dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="center" />
+
+        <!-- Fecha de nacimiento (solo lectura) -->
+
+        <!-- Campo para editar el nombre -->
+        <TextView
+            android:id="@+id/textViewFechaNacimiento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="28/12/2002"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+            <ImageView
+                android:id="@+id/iconoNombre"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_user"
+                android:layout_marginEnd="8dp"/>
+            <EditText
+                android:id="@+id/editTextNombre"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Nombre de usuario"
+                android:text="inesglezz_28"
+                android:background="@drawable/borde_campo"
+                android:padding="12dp"/>
+        </LinearLayout>
+
+        <!-- Campo para editar el correo -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+            <ImageView
+                android:id="@+id/iconoCorreo"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_email"
+                android:layout_marginEnd="8dp"/>
+            <EditText
+                android:id="@+id/editTextCorreo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Correo electrónico"
+                android:text="ines@email.com"
+                android:inputType="textEmailAddress"
+                android:background="@drawable/borde_campo"
+                android:padding="12dp"/>
+        </LinearLayout>
+
+        <!-- Campo para editar el teléfono -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+            <ImageView
+                android:id="@+id/iconoTelefono"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_phone"
+                android:layout_marginEnd="8dp"/>
+            <EditText
+                android:id="@+id/editTextTelefono"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Teléfono"
+                android:text="+34 600 123 456"
+                android:inputType="phone"
+                android:background="@drawable/borde_campo"
+                android:padding="12dp"/>
+        </LinearLayout>
+
+        <!-- Campo para editar la contraseña -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+            <ImageView
+                android:id="@+id/iconoContrasena"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_lock"
+                android:layout_marginEnd="8dp"/>
+            <EditText
+                android:id="@+id/editTextContrasena"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Nueva contraseña"
+                android:inputType="textPassword"
+                android:background="@drawable/borde_campo"
+                android:padding="12dp"/>
+        </LinearLayout>
+
+        <!-- Botón Cancelar -->
+        <Button
+            android:id="@+id/btnCancelar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cancelar"
+            android:backgroundTint="@color/color_primario"
+            android:textColor="@android:color/white"
+            android:padding="12dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Botón Guardar -->
+        <Button
+            android:id="@+id/btnGuardar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="@color/color_primario"
+            android:padding="12dp"
+            android:text="Guardar cambios"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical">
+
+    <!-- Toolbar para el encabezado -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fdb94a"
+        android:elevation="4dp"
+        android:padding="16dp"
+        android:titleTextColor="#493e40">
+
+        <!-- Título de la Toolbar -->
+        <TextView
+            android:id="@+id/encabezado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/chewy"
+            android:text="CINEMANÍA"
+            android:textColor="#493e40"
+            android:textSize="45sp"
+            android:textStyle="bold" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- RecyclerView para mostrar la cartelera -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewCartelera"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

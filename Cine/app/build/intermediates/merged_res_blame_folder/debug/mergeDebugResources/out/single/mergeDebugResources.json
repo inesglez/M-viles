@@ -1,0 +1,214 @@
+[
+    {
+        "merged": "com.example.cine.app-debug-32:/drawable_ic_lock.png.flat",
+        "source": "com.example.cine.app-main-34:/drawable/ic_lock.png"
+    },
+    {
+        "merged": "com.example.cine.app-debug-32:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.cine.app-main-34:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.cine.app-debug-32:/layout_activity_main.xml.flat",
+        "source": "com.example.cine.app-main-34:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.cine.app-debug-32:/drawable_button_rounded.xml.flat",
+        "source": "com.example.cine.app-main-34:/drawable/button_rounded.xml"
+    },
+    {
+        "merged": "com.example.cine.app-debug-32:/font_dirtyoldtown.ttf.flat",
+        "source": "com.example.cine.app-main-34:/font/dirtyoldtown.ttf"
+    },
+    {
+        "merged": "com.example.cine.app-debug-32:/layout_activity_anadir_pelicula.xml.flat",
+        "source": "com.example.cine.app-main-34:/layout/activity_anadir_pelicula.xml"
+    },
+    {
+        "merged": "com.example.cine.app-debug-32:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.cine.app-main-34:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.cine.app-debug-32:/drawable_borde_imagen_redondeado.xml.flat",
+        "source": "com.example.cine.app-main-34:/drawable/borde_imagen_redondeado.xml"
+    },
+    {
+        "merged": "com.example.cine.app-debug-32:/drawable_cinemania.png.flat",
+        "source": "com.example.cine.app-main-34:/drawable/cinemania.png"
+    },
+    {
+        "merged": "com.example.cine.app-debug-32:/layout_toast.xml.flat",
+        "source": "com.example.cine.app-main-34:/layout/toast.xml"
+    },
+    {
+        "merged": "com.example.cine.app-debug-32:/layout_activity_perfil.xml.flat",
+        "source": "com.example.cine.app-main-34:/layout/activity_perfil.xml"
+    },
+    {
+        "merged": "com.example.cine.app-debug-32:/drawable_foto_perfil.png.flat",
+        "source": "com.example.cine.app-main-34:/drawable/foto_perfil.png"
+    },
+    {
+        "merged": "com.example.cine.app-debug-32:/xml_backup_rules.xml.flat",
+        "source": "com.example.cine.app-main-34:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.example.cine.app-debug-32:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.example.cine.app-main-34:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.cine.app-debug-32:/layout_activity_listado_peliculas.xml.flat",
+        "source": "com.example.cine.app-main-34:/layout/activity_listado_peliculas.xml"
+    },
+    {
+        "merged": "com.example.cine.app-debug-32:/layout_activity_entradas.xml.flat",
+        "source": "com.example.cine.app-main-34:/layout/activity_entradas.xml"
+    },
+    {
+        "merged": "com.example.cine.app-debug-32:/layout_item_pelicula.xml.flat",
+        "source": "com.example.cine.app-main-34:/layout/item_pelicula.xml"
+    },
+    {
+        "merged": "com.example.cine.app-debug-32:/layout_activity_editar_pelicula.xml.flat",
+        "source": "com.example.cine.app-main-34:/layout/activity_editar_pelicula.xml"
+    },
+    {
+        "merged": "com.example.cine.app-debug-32:/drawable_login_background.xml.flat",
+        "source": "com.example.cine.app-main-34:/drawable/login_background.xml"
+    },
+    {
+        "merged": "com.example.cine.app-debug-32:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.example.cine.app-main-34:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.example.cine.app-debug-32:/font_comicate.TTF.flat",
+        "source": "com.example.cine.app-main-34:/font/comicate.TTF"
+    },
+    {
+        "merged": "com.example.cine.app-debug-32:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.example.cine.app-main-34:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.cine.app-debug-32:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.cine.app-main-34:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.cine.app-debug-32:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.cine.app-main-34:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.cine.app-debug-32:/drawable_borde_campo.xml.flat",
+        "source": "com.example.cine.app-main-34:/drawable/borde_campo.xml"
+    },
+    {
+        "merged": "com.example.cine.app-debug-32:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.example.cine.app-main-34:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.example.cine.app-debug-32:/drawable_la_infiltrada.jpg.flat",
+        "source": "com.example.cine.app-main-34:/drawable/la_infiltrada.jpg"
+    },
+    {
+        "merged": "com.example.cine.app-debug-32:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.example.cine.app-main-34:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.cine.app-debug-32:/drawable_edit_text_rounded.xml.flat",
+        "source": "com.example.cine.app-main-34:/drawable/edit_text_rounded.xml"
+    },
+    {
+        "merged": "com.example.cine.app-debug-32:/animator_button_anim.xml.flat",
+        "source": "com.example.cine.app-main-34:/animator/button_anim.xml"
+    },
+    {
+        "merged": "com.example.cine.app-debug-32:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.cine.app-main-34:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.cine.app-debug-32:/drawable_ic_phone.png.flat",
+        "source": "com.example.cine.app-main-34:/drawable/ic_phone.png"
+    },
+    {
+        "merged": "com.example.cine.app-debug-32:/layout_activity_detalle_pelicula.xml.flat",
+        "source": "com.example.cine.app-main-34:/layout/activity_detalle_pelicula.xml"
+    },
+    {
+        "merged": "com.example.cine.app-debug-32:/font_madjoe.ttf.flat",
+        "source": "com.example.cine.app-main-34:/font/madjoe.ttf"
+    },
+    {
+        "merged": "com.example.cine.app-debug-32:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.example.cine.app-main-34:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.example.cine.app-debug-32:/xml_data_extraction_rules.xml.flat",
+        "source": "com.example.cine.app-main-34:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.example.cine.app-debug-32:/drawable_rounded_toast.xml.flat",
+        "source": "com.example.cine.app-main-34:/drawable/rounded_toast.xml"
+    },
+    {
+        "merged": "com.example.cine.app-debug-32:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.cine.app-main-34:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.cine.app-debug-32:/font_chewy.ttf.flat",
+        "source": "com.example.cine.app-main-34:/font/chewy.ttf"
+    },
+    {
+        "merged": "com.example.cine.app-debug-32:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.example.cine.app-main-34:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.example.cine.app-debug-32:/drawable_logo.png.flat",
+        "source": "com.example.cine.app-main-34:/drawable/logo.png"
+    },
+    {
+        "merged": "com.example.cine.app-debug-32:/drawable_gru.jpg.flat",
+        "source": "com.example.cine.app-main-34:/drawable/gru.jpg"
+    },
+    {
+        "merged": "com.example.cine.app-debug-32:/drawable_rounded_opacity_bg.xml.flat",
+        "source": "com.example.cine.app-main-34:/drawable/rounded_opacity_bg.xml"
+    },
+    {
+        "merged": "com.example.cine.app-debug-32:/drawable_ic_user.png.flat",
+        "source": "com.example.cine.app-main-34:/drawable/ic_user.png"
+    },
+    {
+        "merged": "com.example.cine.app-debug-32:/drawable_ic_email.png.flat",
+        "source": "com.example.cine.app-main-34:/drawable/ic_email.png"
+    },
+    {
+        "merged": "com.example.cine.app-debug-32:/drawable_venom.jpg.flat",
+        "source": "com.example.cine.app-main-34:/drawable/venom.jpg"
+    },
+    {
+        "merged": "com.example.cine.app-debug-32:/layout_activity_login.xml.flat",
+        "source": "com.example.cine.app-main-34:/layout/activity_login.xml"
+    },
+    {
+        "merged": "com.example.cine.app-debug-32:/drawable_smile.jpg.flat",
+        "source": "com.example.cine.app-main-34:/drawable/smile.jpg"
+    },
+    {
+        "merged": "com.example.cine.app-debug-32:/drawable_joker.jpg.flat",
+        "source": "com.example.cine.app-main-34:/drawable/joker.jpg"
+    },
+    {
+        "merged": "com.example.cine.app-debug-32:/menu_menu_admin.xml.flat",
+        "source": "com.example.cine.app-main-34:/menu/menu_admin.xml"
+    },
+    {
+        "merged": "com.example.cine.app-debug-32:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.cine.app-main-34:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.cine.app-debug-32:/layout_activity_admin.xml.flat",
+        "source": "com.example.cine.app-main-34:/layout/activity_admin.xml"
+    },
+    {
+        "merged": "com.example.cine.app-debug-32:/menu_menu_desplegable.xml.flat",
+        "source": "com.example.cine.app-main-34:/menu/menu_desplegable.xml"
+    }
+]

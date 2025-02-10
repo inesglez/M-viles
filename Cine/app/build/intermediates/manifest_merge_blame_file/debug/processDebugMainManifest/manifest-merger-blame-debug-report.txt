@@ -1,0 +1,195 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.cine"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="24"
+9        android:targetSdkVersion="34" />
+10
+11    <permission
+11-->[androidx.core:core:1.13.0] /home/usuario/.gradle/caches/transforms-4/5293fe78e819acf00cb0f979e093cf56/transformed/core-1.13.0/AndroidManifest.xml:22:5-24:47
+12        android:name="com.example.cine.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+12-->[androidx.core:core:1.13.0] /home/usuario/.gradle/caches/transforms-4/5293fe78e819acf00cb0f979e093cf56/transformed/core-1.13.0/AndroidManifest.xml:23:9-81
+13        android:protectionLevel="signature" />
+13-->[androidx.core:core:1.13.0] /home/usuario/.gradle/caches/transforms-4/5293fe78e819acf00cb0f979e093cf56/transformed/core-1.13.0/AndroidManifest.xml:24:9-44
+14
+15    <uses-permission android:name="com.example.cine.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+15-->[androidx.core:core:1.13.0] /home/usuario/.gradle/caches/transforms-4/5293fe78e819acf00cb0f979e093cf56/transformed/core-1.13.0/AndroidManifest.xml:26:5-97
+15-->[androidx.core:core:1.13.0] /home/usuario/.gradle/caches/transforms-4/5293fe78e819acf00cb0f979e093cf56/transformed/core-1.13.0/AndroidManifest.xml:26:22-94
+16
+17    <application
+17-->/home/usuario/AndroidStudioProjects/Cine/app/src/main/AndroidManifest.xml:6:5-69:19
+18        android:allowBackup="true"
+18-->/home/usuario/AndroidStudioProjects/Cine/app/src/main/AndroidManifest.xml:7:9-35
+19        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+19-->[androidx.core:core:1.13.0] /home/usuario/.gradle/caches/transforms-4/5293fe78e819acf00cb0f979e093cf56/transformed/core-1.13.0/AndroidManifest.xml:28:18-86
+20        android:dataExtractionRules="@xml/data_extraction_rules"
+20-->/home/usuario/AndroidStudioProjects/Cine/app/src/main/AndroidManifest.xml:8:9-65
+21        android:debuggable="true"
+22        android:extractNativeLibs="false"
+23        android:fullBackupContent="@xml/backup_rules"
+23-->/home/usuario/AndroidStudioProjects/Cine/app/src/main/AndroidManifest.xml:9:9-54
+24        android:icon="@drawable/cinemania"
+24-->/home/usuario/AndroidStudioProjects/Cine/app/src/main/AndroidManifest.xml:10:9-43
+25        android:label="@string/app_name"
+25-->/home/usuario/AndroidStudioProjects/Cine/app/src/main/AndroidManifest.xml:11:9-41
+26        android:roundIcon="@drawable/cinemania"
+26-->/home/usuario/AndroidStudioProjects/Cine/app/src/main/AndroidManifest.xml:12:9-48
+27        android:supportsRtl="true"
+27-->/home/usuario/AndroidStudioProjects/Cine/app/src/main/AndroidManifest.xml:13:9-35
+28        android:testOnly="true"
+29        android:theme="@style/Theme.Cine" >
+29-->/home/usuario/AndroidStudioProjects/Cine/app/src/main/AndroidManifest.xml:14:9-42
+30
+31        <!-- Declarar LoginActivity como actividad principal -->
+32        <activity
+32-->/home/usuario/AndroidStudioProjects/Cine/app/src/main/AndroidManifest.xml:18:9-25:20
+33            android:name="com.example.cine.LoginActivity"
+33-->/home/usuario/AndroidStudioProjects/Cine/app/src/main/AndroidManifest.xml:19:13-42
+34            android:exported="true" >
+34-->/home/usuario/AndroidStudioProjects/Cine/app/src/main/AndroidManifest.xml:20:13-36
+35            <intent-filter>
+35-->/home/usuario/AndroidStudioProjects/Cine/app/src/main/AndroidManifest.xml:21:13-24:29
+36                <action android:name="android.intent.action.MAIN" />
+36-->/home/usuario/AndroidStudioProjects/Cine/app/src/main/AndroidManifest.xml:22:17-69
+36-->/home/usuario/AndroidStudioProjects/Cine/app/src/main/AndroidManifest.xml:22:25-66
+37
+38                <category android:name="android.intent.category.LAUNCHER" />
+38-->/home/usuario/AndroidStudioProjects/Cine/app/src/main/AndroidManifest.xml:23:17-77
+38-->/home/usuario/AndroidStudioProjects/Cine/app/src/main/AndroidManifest.xml:23:27-74
+39            </intent-filter>
+40        </activity>
+41
+42        <!-- MainActivity -->
+43        <activity
+43-->/home/usuario/AndroidStudioProjects/Cine/app/src/main/AndroidManifest.xml:28:9-31:20
+44            android:name="com.example.cine.MainActivity"
+44-->/home/usuario/AndroidStudioProjects/Cine/app/src/main/AndroidManifest.xml:29:13-41
+45            android:exported="true" >
+45-->/home/usuario/AndroidStudioProjects/Cine/app/src/main/AndroidManifest.xml:30:13-36
+46        </activity>
+47
+48        <!-- AdminActivity -->
+49        <activity
+49-->/home/usuario/AndroidStudioProjects/Cine/app/src/main/AndroidManifest.xml:34:9-37:20
+50            android:name="com.example.cine.AdminActivity"
+50-->/home/usuario/AndroidStudioProjects/Cine/app/src/main/AndroidManifest.xml:35:13-42
+51            android:exported="true" >
+51-->/home/usuario/AndroidStudioProjects/Cine/app/src/main/AndroidManifest.xml:36:13-36
+52        </activity>
+53
+54        <!-- AñadirPeliculaActivity -->
+55        <activity
+55-->/home/usuario/AndroidStudioProjects/Cine/app/src/main/AndroidManifest.xml:40:9-43:20
+56            android:name="com.example.cine.AñadirPelicula"
+56-->/home/usuario/AndroidStudioProjects/Cine/app/src/main/AndroidManifest.xml:41:13-43
+57            android:exported="true" >
+57-->/home/usuario/AndroidStudioProjects/Cine/app/src/main/AndroidManifest.xml:42:13-36
+58        </activity>
+59
+60        <!-- DetallePeliculaActivity -->
+61        <activity
+61-->/home/usuario/AndroidStudioProjects/Cine/app/src/main/AndroidManifest.xml:46:9-49:20
+62            android:name="com.example.cine.DetallePeliculaActivity"
+62-->/home/usuario/AndroidStudioProjects/Cine/app/src/main/AndroidManifest.xml:47:13-52
+63            android:exported="false" >
+63-->/home/usuario/AndroidStudioProjects/Cine/app/src/main/AndroidManifest.xml:48:13-37
+64        </activity>
+65
+66        <!-- EditarPeliculaActivity -->
+67        <activity
+67-->/home/usuario/AndroidStudioProjects/Cine/app/src/main/AndroidManifest.xml:52:9-55:20
+68            android:name="com.example.cine.EditarPeliculaActivity"
+68-->/home/usuario/AndroidStudioProjects/Cine/app/src/main/AndroidManifest.xml:53:13-51
+69            android:exported="true" >
+69-->/home/usuario/AndroidStudioProjects/Cine/app/src/main/AndroidManifest.xml:54:13-36
+70        </activity>
+71
+72        <!-- EntradasActivity -->
+73        <activity
+73-->/home/usuario/AndroidStudioProjects/Cine/app/src/main/AndroidManifest.xml:58:9-61:20
+74            android:name="com.example.cine.EntradasActivity"
+74-->/home/usuario/AndroidStudioProjects/Cine/app/src/main/AndroidManifest.xml:59:13-45
+75            android:exported="true" >
+75-->/home/usuario/AndroidStudioProjects/Cine/app/src/main/AndroidManifest.xml:60:13-36
+76        </activity>
+77
+78        <!-- PerfilActivity -->
+79        <activity
+79-->/home/usuario/AndroidStudioProjects/Cine/app/src/main/AndroidManifest.xml:64:9-67:20
+80            android:name="com.example.cine.PerfilActivity"
+80-->/home/usuario/AndroidStudioProjects/Cine/app/src/main/AndroidManifest.xml:65:13-43
+81            android:exported="true" >
+81-->/home/usuario/AndroidStudioProjects/Cine/app/src/main/AndroidManifest.xml:66:13-36
+82        </activity>
+83
+84        <provider
+84-->[androidx.emoji2:emoji2:1.3.0] /home/usuario/.gradle/caches/transforms-4/c493d2395b432a509d9834cf5e1f230c/transformed/emoji2-1.3.0/AndroidManifest.xml:24:9-32:20
+85            android:name="androidx.startup.InitializationProvider"
+85-->[androidx.emoji2:emoji2:1.3.0] /home/usuario/.gradle/caches/transforms-4/c493d2395b432a509d9834cf5e1f230c/transformed/emoji2-1.3.0/AndroidManifest.xml:25:13-67
+86            android:authorities="com.example.cine.androidx-startup"
+86-->[androidx.emoji2:emoji2:1.3.0] /home/usuario/.gradle/caches/transforms-4/c493d2395b432a509d9834cf5e1f230c/transformed/emoji2-1.3.0/AndroidManifest.xml:26:13-68
+87            android:exported="false" >
+87-->[androidx.emoji2:emoji2:1.3.0] /home/usuario/.gradle/caches/transforms-4/c493d2395b432a509d9834cf5e1f230c/transformed/emoji2-1.3.0/AndroidManifest.xml:27:13-37
+88            <meta-data
+88-->[androidx.emoji2:emoji2:1.3.0] /home/usuario/.gradle/caches/transforms-4/c493d2395b432a509d9834cf5e1f230c/transformed/emoji2-1.3.0/AndroidManifest.xml:29:13-31:52
+89                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+89-->[androidx.emoji2:emoji2:1.3.0] /home/usuario/.gradle/caches/transforms-4/c493d2395b432a509d9834cf5e1f230c/transformed/emoji2-1.3.0/AndroidManifest.xml:30:17-75
+90                android:value="androidx.startup" />
+90-->[androidx.emoji2:emoji2:1.3.0] /home/usuario/.gradle/caches/transforms-4/c493d2395b432a509d9834cf5e1f230c/transformed/emoji2-1.3.0/AndroidManifest.xml:31:17-49
+91            <meta-data
+91-->[androidx.lifecycle:lifecycle-process:2.6.2] /home/usuario/.gradle/caches/transforms-4/033f0fcc92cd16b43074e4c612c3f676/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:29:13-31:52
+92                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+92-->[androidx.lifecycle:lifecycle-process:2.6.2] /home/usuario/.gradle/caches/transforms-4/033f0fcc92cd16b43074e4c612c3f676/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:30:17-78
+93                android:value="androidx.startup" />
+93-->[androidx.lifecycle:lifecycle-process:2.6.2] /home/usuario/.gradle/caches/transforms-4/033f0fcc92cd16b43074e4c612c3f676/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:31:17-49
+94            <meta-data
+94-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/usuario/.gradle/caches/transforms-4/07b32b124f6f19c358765031b70a2870/transformed/profileinstaller-1.4.0/AndroidManifest.xml:29:13-31:52
+95                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+95-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/usuario/.gradle/caches/transforms-4/07b32b124f6f19c358765031b70a2870/transformed/profileinstaller-1.4.0/AndroidManifest.xml:30:17-85
+96                android:value="androidx.startup" />
+96-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/usuario/.gradle/caches/transforms-4/07b32b124f6f19c358765031b70a2870/transformed/profileinstaller-1.4.0/AndroidManifest.xml:31:17-49
+97        </provider>
+98
+99        <receiver
+99-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/usuario/.gradle/caches/transforms-4/07b32b124f6f19c358765031b70a2870/transformed/profileinstaller-1.4.0/AndroidManifest.xml:34:9-52:20
+100            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+100-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/usuario/.gradle/caches/transforms-4/07b32b124f6f19c358765031b70a2870/transformed/profileinstaller-1.4.0/AndroidManifest.xml:35:13-76
+101            android:directBootAware="false"
+101-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/usuario/.gradle/caches/transforms-4/07b32b124f6f19c358765031b70a2870/transformed/profileinstaller-1.4.0/AndroidManifest.xml:36:13-44
+102            android:enabled="true"
+102-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/usuario/.gradle/caches/transforms-4/07b32b124f6f19c358765031b70a2870/transformed/profileinstaller-1.4.0/AndroidManifest.xml:37:13-35
+103            android:exported="true"
+103-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/usuario/.gradle/caches/transforms-4/07b32b124f6f19c358765031b70a2870/transformed/profileinstaller-1.4.0/AndroidManifest.xml:38:13-36
+104            android:permission="android.permission.DUMP" >
+104-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/usuario/.gradle/caches/transforms-4/07b32b124f6f19c358765031b70a2870/transformed/profileinstaller-1.4.0/AndroidManifest.xml:39:13-57
+105            <intent-filter>
+105-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/usuario/.gradle/caches/transforms-4/07b32b124f6f19c358765031b70a2870/transformed/profileinstaller-1.4.0/AndroidManifest.xml:40:13-42:29
+106                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+106-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/usuario/.gradle/caches/transforms-4/07b32b124f6f19c358765031b70a2870/transformed/profileinstaller-1.4.0/AndroidManifest.xml:41:17-91
+106-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/usuario/.gradle/caches/transforms-4/07b32b124f6f19c358765031b70a2870/transformed/profileinstaller-1.4.0/AndroidManifest.xml:41:25-88
+107            </intent-filter>
+108            <intent-filter>
+108-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/usuario/.gradle/caches/transforms-4/07b32b124f6f19c358765031b70a2870/transformed/profileinstaller-1.4.0/AndroidManifest.xml:43:13-45:29
+109                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+109-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/usuario/.gradle/caches/transforms-4/07b32b124f6f19c358765031b70a2870/transformed/profileinstaller-1.4.0/AndroidManifest.xml:44:17-85
+109-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/usuario/.gradle/caches/transforms-4/07b32b124f6f19c358765031b70a2870/transformed/profileinstaller-1.4.0/AndroidManifest.xml:44:25-82
+110            </intent-filter>
+111            <intent-filter>
+111-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/usuario/.gradle/caches/transforms-4/07b32b124f6f19c358765031b70a2870/transformed/profileinstaller-1.4.0/AndroidManifest.xml:46:13-48:29
+112                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+112-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/usuario/.gradle/caches/transforms-4/07b32b124f6f19c358765031b70a2870/transformed/profileinstaller-1.4.0/AndroidManifest.xml:47:17-88
+112-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/usuario/.gradle/caches/transforms-4/07b32b124f6f19c358765031b70a2870/transformed/profileinstaller-1.4.0/AndroidManifest.xml:47:25-85
+113            </intent-filter>
+114            <intent-filter>
+114-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/usuario/.gradle/caches/transforms-4/07b32b124f6f19c358765031b70a2870/transformed/profileinstaller-1.4.0/AndroidManifest.xml:49:13-51:29
+115                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+115-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/usuario/.gradle/caches/transforms-4/07b32b124f6f19c358765031b70a2870/transformed/profileinstaller-1.4.0/AndroidManifest.xml:50:17-95
+115-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/usuario/.gradle/caches/transforms-4/07b32b124f6f19c358765031b70a2870/transformed/profileinstaller-1.4.0/AndroidManifest.xml:50:25-92
+116            </intent-filter>
+117        </receiver>
+118    </application>
+119
+120</manifest>
